@@ -8,6 +8,7 @@
   --color-surface-container-high: #f1e3fd;
   --color-surface-container-highest: #ecddf7;
   --color-on-surface: #20182a;
+  --color-on-background: #20182a;
   --color-on-surface-variant: #5a4043;
   --color-inverse-surface: #362d40;
   --color-inverse-on-surface: #f8edff;
@@ -146,6 +147,27 @@
     padding: 24px;
   }
 
+  .double-bezel-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .double-bezel:hover .double-bezel-lift,
+  .double-bezel-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(28, 20, 38, 0.12);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .double-bezel-lift {
+      transition: none;
+    }
+
+    .double-bezel:hover .double-bezel-lift,
+    .double-bezel-lift:hover {
+      transform: none;
+    }
+  }
+
   .floating-slab {
     background: var(--color-dark-ink);
     border-radius: 40px;
@@ -183,6 +205,13 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[marquee_40s_linear_infinite\],
+  .animate-\[marquee-reverse_40s_linear_infinite\] {
+    animation: none !important;
   }
 }
 
