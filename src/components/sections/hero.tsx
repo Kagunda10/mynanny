@@ -51,8 +51,9 @@ type HeroProps = {
 }
 
 export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
-  const headlineParts = content.heroHeadline.split('trust')
-  const hasTrustHighlight = content.heroHeadline.toLowerCase().includes('trust')
+  const words = content.heroHeadline.trim().split(/\s+/)
+  const firstWord = words[0] ?? ''
+  const restOfHeadline = words.slice(1).join(' ')
 
   return (
     <section className="relative max-w-[1280px] mx-auto px-5 md:px-6 py-12 flex flex-col md:grid md:grid-cols-12 gap-12 items-center min-h-[calc(100dvh-120px)] overflow-x-hidden">
@@ -65,15 +66,8 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
         <EyebrowPill icon="verified" text={content.heroEyebrow} />
 
         <h1 className="text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-tight mt-6 mb-6">
-          {hasTrustHighlight ? (
-            <>
-              {headlineParts[0]}
-              <span className="text-brand-pink">trust</span>
-              {headlineParts.slice(1).join('trust')}
-            </>
-          ) : (
-            content.heroHeadline
-          )}
+          <span className="text-brand-pink">{firstWord}</span>
+          {restOfHeadline ? ` ${restOfHeadline}` : ''}
         </h1>
 
         <p className="text-[18px] leading-relaxed text-on-surface-variant max-w-lg mb-8">
