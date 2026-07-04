@@ -18,6 +18,7 @@
   --color-primary-fixed: #ffd9dd;
   --color-primary-fixed-dim: #ffb2bc;
   --color-brand-pink: #E6175C;
+  --color-accent: var(--color-brand-pink);
   --color-secondary: #006972;
   --color-secondary-container: #68efff;
   --color-secondary-fixed: #8bf2ff;
@@ -48,6 +49,17 @@
   --radius-bezel-inner: 18px;
   --radius-slab: 40px;
   --radius-full: 9999px;
+
+  --text-display-sm: 2.25rem;
+  --text-display-md: 3rem;
+  --text-heading: 2rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-caption: 0.75rem;
+
+  --spacing-section: 3rem;
+  --spacing-section-lg: 4.5rem;
+  --width-container: 80rem;
 }
 
 @layer base {
