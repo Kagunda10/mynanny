@@ -1,0 +1,18 @@
+import type { Metadata } from 'next'
+import { AboutContent } from './content'
+import { getAboutContent, getTeamMembers, getTimeline } from '@/lib/cms'
+
+export const metadata: Metadata = {
+  title: 'About Us | MyNanny',
+  description: 'Learn about MyNanny — Nairobi\'s trusted platform for vetted domestic help since 2019.',
+}
+
+export default async function AboutPage() {
+  const [about, timeline, team] = await Promise.all([
+    getAboutContent(),
+    getTimeline(),
+    getTeamMembers(),
+  ])
+
+  return <AboutContent about={about} timeline={timeline} team={team} />
+}

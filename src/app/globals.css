@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #F5F4F8;
+  --color-surface-dim: #e3d5ee;
+  --color-surface-container-low: #faf0ff;
+  --color-surface-container: #f6e9ff;
+  --color-surface-container-high: #f1e3fd;
+  --color-surface-container-highest: #ecddf7;
+  --color-on-surface: #20182a;
+  --color-on-surface-variant: #5a4043;
+  --color-inverse-surface: #362d40;
+  --color-inverse-on-surface: #f8edff;
+  --color-primary: #900034;
+  --color-primary-container: #bc0047;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #ffd9dd;
+  --color-primary-fixed-dim: #ffb2bc;
+  --color-brand-pink: #E6175C;
+  --color-secondary: #006972;
+  --color-secondary-container: #68efff;
+  --color-secondary-fixed: #8bf2ff;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #623f00;
+  --color-tertiary-fixed: #ffddb4;
+  --color-on-tertiary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-outline: #8e6f73;
+  --color-outline-variant: #e3bdc1;
+  --color-dark-ink: #1C1426;
+  --color-verified-green: #239B47;
+  --color-star-amber: #FFB800;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Clash Display', 'Plus Jakarta Sans', sans-serif;
+
+  --color-ink-500: #7A7385;
+  --color-teal-bright: #19BCCB;
+  --color-chip-bg: #FFF1F6;
+
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-bezel-outer: 22px;
+  --radius-bezel-inner: 18px;
+  --radius-slab: 40px;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+@keyframes coverage-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(230, 23, 92, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(230, 23, 92, 0);
+  }
+}
+
+@layer components {
+  .coverage-leaflet-map .leaflet-control-attribution {
+    font-size: 9px;
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-radius: 6px 0 0 0;
+    padding: 2px 6px;
+    margin: 0;
+  }
+
+  .coverage-pin-icon {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .coverage-pin {
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-brand-pink) 75%, white);
+    box-shadow: 0 2px 8px rgba(28, 20, 38, 0.18);
+    transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  }
+
+  .coverage-pin.is-focused {
+    background: var(--color-brand-pink);
+    transform: scale(1.2);
+    box-shadow:
+      0 0 0 3px rgba(230, 23, 92, 0.25),
+      0 2px 10px rgba(28, 20, 38, 0.22);
+  }
+
+  .coverage-pin.is-dimmed {
+    opacity: 0.45;
+  }
+
+  .coverage-pin.is-pulse.is-focused {
+    animation: coverage-pulse 2.8s ease-out infinite;
+  }
+
+  .double-bezel {
+    border: 1px solid #ECEAF1;
+    border-radius: 22px;
+    padding: 4px;
+  }
+
+  .double-bezel-inner {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(28, 20, 38, 0.08);
+    padding: 24px;
+  }
+
+  .floating-slab {
+    background: var(--color-dark-ink);
+    border-radius: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .floating-slab {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  .plum-shadow {
+    box-shadow: 0 12px 32px rgba(28, 20, 38, 0.08);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}

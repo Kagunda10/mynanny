@@ -1,0 +1,21 @@
+2026-07-04T15:51:55.316Z launch: Executable doesn't exist at /var/folders/zw/fnh34vv53q3gt8ctpqbcj00m0000gn/T/cursor-sandbox-cache/7769ed5baec0796c63d5b35d0002c8d5/playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+launch: Executable doesn't exist at /var/folders/zw/fnh34vv53q3gt8ctpqbcj00m0000gn/T/cursor-sandbox-cache/7769ed5baec0796c63d5b35d0002c8d5/playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+    at launch (/Users/mac/.claude/skills/gstack/browse/src/browser-manager.ts:203:35)
+    at start (/Users/mac/.claude/skills/gstack/browse/src/server.ts:998:28)
+    at processTicksAndRejections (native:7:39)
