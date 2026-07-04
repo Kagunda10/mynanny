@@ -23,7 +23,7 @@ export function Marquee({
       <div className="overflow-hidden whitespace-nowrap">
         <div className="inline-flex animate-[marquee-reverse_40s_linear_infinite] gap-12 px-6">
           {[...services, ...services].map((s, i) => (
-            <span key={i} className="text-[24px] font-medium text-primary flex items-center gap-2">
+            <span key={i} className="text-[24px] font-medium text-brand-pink flex items-center gap-2">
               {s}
               <span className="w-2 h-2 rounded-full bg-primary/30" />
             </span>

@@ -14,7 +14,7 @@ const TRUST_CHIPS = [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDRXwl4L_-M5RBUNuH30REAfqBK6hfqdQKcSPvQvIlb5IO65w2VDBETwFT-CtoARPpvUmi7AAyJVO_B484KfdS1MXb0obPg-sAM1c42UA2cqilJd6j44Q2Kf66qWxI15QmyYcT-fZ7jqiZhEdmECi-hltQPl2JHHz3U4LC5UYFCb-YcGDJ_9tyoNzeQfa9LYkFdFbSAZSWhMpJiyBOKXj4l_IS6bNq0VHlRt1EqNujLnH_jYy8gmG3bvQ',
     title: 'Mary W.',
     subtitle: 'Nanny · 5 stars',
-    subtitleClass: 'text-primary',
+    subtitleClass: 'text-brand-pink',
   },
   {
     icon: 'security',
@@ -83,10 +83,10 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
                   <CountUp
                     target={stat.numericTarget}
                     suffix={stat.suffix}
-                    className="text-[32px] font-semibold text-primary"
+                    className="text-[32px] font-semibold text-brand-pink"
                   />
                 ) : (
-                  <span className="text-[32px] font-semibold text-primary flex items-center gap-2">
+                  <span className="text-[32px] font-semibold text-brand-pink flex items-center gap-2">
                     {stat.value}
                     {stat.label === 'User Rating' && (
                       <span
@@ -150,7 +150,7 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
                 </div>
                 <div>
                   <p className="text-[14px] font-bold">Mary W.</p>
-                  <p className="text-[12px] text-primary">Nanny · 5 stars</p>
+                  <p className="text-[12px] text-brand-pink">Nanny · 5 stars</p>
                 </div>
               </div>
             </div>
@@ -178,9 +178,9 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
         </div>
       </motion.div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-60">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
         <div className="w-6 h-10 border-2 border-on-surface-variant/40 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
+          <div className="w-1 h-2 bg-brand-pink rounded-full animate-bounce" />
         </div>
       </div>
     </section>
