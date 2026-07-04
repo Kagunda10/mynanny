@@ -8,6 +8,7 @@ import { PrimaryButton } from './ui/primary-button'
 import { BrandLogo } from './brand-logo'
 import type { NavItem } from '@/lib/cms-types'
 import { DEFAULT_SITE_SETTINGS } from '@/lib/defaults'
+import { COMPANY } from '@/lib/site-content'
 
 type NavProps = {
   items?: NavItem[]
@@ -48,9 +49,12 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
-          <button className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded">
+          <Link
+            href={COMPANY.appUrl}
+            className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:text-brand-pink transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded"
+          >
             Login
-          </button>
+          </Link>
 
           <div className="hidden lg:block">
             <PrimaryButton href="/#match-form" className="!py-2 !px-5 text-sm">
@@ -122,9 +126,13 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
               >
                 Hiring Guides
               </PrimaryButton>
-              <button className="text-on-surface-variant font-semibold py-3">
+              <Link
+                href={COMPANY.appUrl}
+                className="text-on-surface-variant font-semibold py-3 text-center hover:text-brand-pink transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
                 Login
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}

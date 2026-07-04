@@ -1,10 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import { SectionEntrance } from '@/components/motion/section-entrance'
 import { SectionHeader } from '@/components/ui/section-header'
 import { motion } from 'motion/react'
 import type { TestimonialReview } from '@/lib/cms-types'
 import { DEFAULT_HOMEPAGE, DEFAULT_TESTIMONIALS } from '@/lib/defaults'
+import { COMPANY } from '@/lib/site-content'
 
 function Stars({ count }: { count: number }) {
   return (
@@ -52,10 +54,15 @@ export function GoogleReviews({
             className="mb-0"
             subtitleClassName="mx-0"
           />
-          <button className="text-primary font-bold flex items-center gap-2 border-b-2 border-primary/20 pb-1">
+          <Link
+            href={COMPANY.googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-pink font-bold flex items-center gap-2 border-b-2 border-brand-pink/20 pb-1 hover:border-brand-pink/50 transition-colors"
+          >
             Read all Google Reviews
             <span className="material-symbols-outlined">arrow_outward</span>
-          </button>
+          </Link>
         </div>
 
         <SectionEntrance>
