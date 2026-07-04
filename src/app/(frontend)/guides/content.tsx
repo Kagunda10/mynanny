@@ -282,7 +282,8 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
             <div className="flex flex-col gap-6">
               <div className="relative max-w-xl">
                 <input
-                  type="text"
+                  type="search"
+                  aria-label="Search guides"
                   placeholder="Search guides (e.g., contracts, wages)..."
                   className="w-full h-[52px] bg-white border border-outline-variant/50 rounded-full px-12 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all shadow-sm"
                 />
@@ -460,7 +461,7 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                 <h2 className="text-[36px] md:text-[48px] font-semibold leading-[1.1] mb-4 text-white">
                   One useful email a month.
                 </h2>
-                <p className="text-lg text-surface-variant/80">
+                <p className="text-lg text-on-surface-variant/80">
                   Hiring tips, market rates, no spam.
                 </p>
               </div>
@@ -479,7 +480,7 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                     <span className="material-symbols-outlined !text-[20px]">arrow_forward</span>
                   </button>
                 </form>
-                <p className="text-xs text-surface-variant/60 mt-4 px-2">
+                <p className="text-xs text-on-surface-variant/60 mt-4 px-2">
                   We respect your inbox. Unsubscribe anytime.
                 </p>
               </div>
