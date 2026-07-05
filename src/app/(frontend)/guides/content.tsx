@@ -149,11 +149,10 @@ function CategoryPill({
   return (
     <button
       onClick={onClick}
-      className={`shrink-0 px-5 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap ${
-        active
+      className={`shrink-0 px-5 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap ${active
           ? 'bg-primary text-on-primary'
           : 'bg-white border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary'
-      }`}
+        }`}
     >
       {label}
     </button>
@@ -282,8 +281,7 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
             <div className="flex flex-col gap-6">
               <div className="relative max-w-xl">
                 <input
-                  type="search"
-                  aria-label="Search guides"
+                  type="text"
                   placeholder="Search guides (e.g., contracts, wages)..."
                   className="w-full h-[52px] bg-white border border-outline-variant/50 rounded-full px-12 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all shadow-sm"
                 />
@@ -390,11 +388,10 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                     e.preventDefault()
                     if (currentPage > 1) setCurrentPage(currentPage - 1)
                   }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${
-                    currentPage === 1
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${currentPage === 1
                       ? 'border-outline-variant/20 text-outline/40 pointer-events-none'
                       : 'border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary'
-                  }`}
+                    }`}
                   aria-label="Previous page"
                 >
                   <span className="material-symbols-outlined !text-[18px]">chevron_left</span>
@@ -407,11 +404,10 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                       e.preventDefault()
                       setCurrentPage(page)
                     }}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
-                      page === currentPage
+                    className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${page === currentPage
                         ? 'bg-primary text-on-primary'
                         : 'border border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary'
-                    }`}
+                      }`}
                     aria-label={`Page ${page}`}
                     aria-current={page === currentPage ? 'page' : undefined}
                   >
@@ -424,11 +420,10 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                     e.preventDefault()
                     if (currentPage < totalPages) setCurrentPage(currentPage + 1)
                   }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${
-                    currentPage === totalPages
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${currentPage === totalPages
                       ? 'border-outline-variant/20 text-outline/40 pointer-events-none'
                       : 'border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary'
-                  }`}
+                    }`}
                   aria-label="Next page"
                 >
                   <span className="material-symbols-outlined !text-[18px]">chevron_right</span>
@@ -461,7 +456,7 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                 <h2 className="text-[36px] md:text-[48px] font-semibold leading-[1.1] mb-4 text-white">
                   One useful email a month.
                 </h2>
-                <p className="text-lg text-on-surface-variant/80">
+                <p className="text-lg text-surface-variant/80">
                   Hiring tips, market rates, no spam.
                 </p>
               </div>
@@ -480,7 +475,7 @@ export function GuidesContent({ cmsArticles }: { cmsArticles?: ArticlePreview[] 
                     <span className="material-symbols-outlined !text-[20px]">arrow_forward</span>
                   </button>
                 </form>
-                <p className="text-xs text-on-surface-variant/60 mt-4 px-2">
+                <p className="text-xs text-surface-variant/60 mt-4 px-2">
                   We respect your inbox. Unsubscribe anytime.
                 </p>
               </div>

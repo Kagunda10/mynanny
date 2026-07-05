@@ -15,8 +15,9 @@ export function HireSteps({ content = DEFAULT_MARKETING.hireSteps }: HireStepsPr
   const reduceMotion = useReducedMotion()
 
   return (
-    <section className="bg-dark-ink rounded-[28px] md:rounded-[36px] mx-5 md:mx-6 py-12 md:py-16 text-white overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+    <section className="px-5 md:px-6 max-w-[1280px] mx-auto">
+      <div className="bg-dark-ink rounded-[28px] md:rounded-[36px] py-12 md:py-16 text-white overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 lg:items-center">
           <SectionEntrance className="lg:col-span-5">
             <SectionHeader
@@ -69,6 +70,7 @@ export function HireSteps({ content = DEFAULT_MARKETING.hireSteps }: HireStepsPr
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

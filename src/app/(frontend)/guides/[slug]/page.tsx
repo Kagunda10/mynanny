@@ -373,8 +373,8 @@ export default async function GuidePage({ params }: Props) {
                         key={item.id}
                         href={`#${item.id}`}
                         className={`block text-sm transition-colors pl-3 border-l-2 ${i === 0
-                            ? 'text-brand-pink font-semibold border-brand-pink'
-                            : 'text-on-surface-variant hover:text-brand-pink border-transparent'
+                          ? 'text-brand-pink font-semibold border-brand-pink'
+                          : 'text-on-surface-variant hover:text-brand-pink border-transparent'
                           }`}
                       >
                         {item.label}
@@ -388,7 +388,7 @@ export default async function GuidePage({ params }: Props) {
               <div className="rounded-2xl overflow-hidden bg-inverse-surface text-inverse-on-surface p-6 relative group">
                 <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/40 transition-colors" />
                 <h4 className="text-xl font-medium mb-2 relative">Find your perfect nanny</h4>
-                <p className="text-on-surface-variant/70 text-sm mb-6 relative">
+                <p className="text-surface-variant/70 text-sm mb-6 relative">
                   Safe, secure, and stress-free hiring in Nairobi.
                 </p>
                 <PrimaryButton href="/" showIcon={false} className="relative w-full justify-center text-sm">

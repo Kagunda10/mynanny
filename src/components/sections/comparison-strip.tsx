@@ -10,8 +10,8 @@ type ComparisonStripProps = {
 
 export function ComparisonStrip({ content = DEFAULT_MARKETING.comparison }: ComparisonStripProps) {
   return (
-    <section className="py-12 bg-surface-container-low">
-      <div className="max-w-4xl mx-auto px-5">
+    <section className="py-12 px-5 md:px-6 max-w-[1280px] mx-auto">
+      <div className="bg-surface-container-low rounded-[40px] py-12 px-5 max-w-4xl mx-auto">
         <SectionEntrance>
           <div className="double-bezel">
             <div className="double-bezel-inner">

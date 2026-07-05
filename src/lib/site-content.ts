@@ -6,8 +6,6 @@ export const COMPANY = {
   location: 'Nairobi, Kenya',
   website: 'https://mynanny.co.ke',
   appUrl: 'https://web.mynanny.co.ke',
-  googleReviewsUrl:
-    'https://www.google.com/maps/search/?api=1&query=MyNanny+Nairobi+Kenya+reviews',
   email: 'info@mynanny.co.ke',
   supportEmail: 'support@mynanny.co.ke',
   phones: ['+254 726 378 444', '+254 753 679 481'],

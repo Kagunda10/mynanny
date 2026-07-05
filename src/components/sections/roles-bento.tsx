@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { SectionEntrance } from '@/components/motion/section-entrance'
 import { SectionHeader } from '@/components/ui/section-header'
 
@@ -12,10 +11,7 @@ export function RolesBento() {
       <SectionEntrance>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[600px]">
           {/* Large nanny card */}
-          <Link
-            href="/services"
-            className="md:col-span-2 md:row-span-2 double-bezel group overflow-hidden block focus-visible:outline-none"
-          >
+          <div className="md:col-span-2 md:row-span-2 double-bezel group cursor-pointer overflow-hidden">
             <div className="double-bezel-inner !p-0 h-full relative overflow-hidden">
               <img
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -27,10 +23,10 @@ export function RolesBento() {
                 <p className="text-white/80">Verified, background-checked, and child-safety trained professionals.</p>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Deep Cleaning */}
-          <Link href="/services" className="md:col-span-2 double-bezel group block focus-visible:outline-none">
+          <div className="md:col-span-2 double-bezel group cursor-pointer">
             <div className="double-bezel-inner h-full bg-secondary-container/20 flex flex-col justify-between">
               <div>
                 <span className="bg-secondary text-white px-3 py-1 rounded-full text-[12px] font-bold mb-4 inline-block">
@@ -43,10 +39,10 @@ export function RolesBento() {
                 <span className="material-symbols-outlined text-secondary !text-[48px]">sanitizer</span>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Elderly Care */}
-          <Link href="/services" className="double-bezel group block focus-visible:outline-none">
+          <div className="double-bezel group cursor-pointer">
             <div className="double-bezel-inner h-full bg-tertiary-fixed/20 flex flex-col justify-between">
               <h3 className="text-[24px] font-medium text-tertiary">Elderly Care</h3>
               <p className="text-on-surface-variant text-[12px]">Compassionate assistance for your seniors.</p>
@@ -54,10 +50,10 @@ export function RolesBento() {
                 <span className="material-symbols-outlined text-tertiary !text-[32px]">elderly</span>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Laundry */}
-          <Link href="/services" className="double-bezel group block focus-visible:outline-none">
+          <div className="double-bezel group cursor-pointer">
             <div className="double-bezel-inner h-full bg-surface-container-highest flex flex-col justify-between">
               <h3 className="text-[24px] font-medium text-on-surface">Laundry</h3>
               <p className="text-on-surface-variant text-[12px]">Wash, dry, and professional ironing.</p>
@@ -65,7 +61,7 @@ export function RolesBento() {
                 <span className="material-symbols-outlined text-on-surface !text-[32px]">local_laundry_service</span>
               </div>
             </div>
-          </Link>
+          </div>
         </div>
       </SectionEntrance>
     </section>

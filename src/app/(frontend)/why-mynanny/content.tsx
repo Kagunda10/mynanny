@@ -61,8 +61,8 @@ export function WhyMyNannyContent({
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 bg-surface-container-low">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+      <section className="py-20 px-5 md:px-6 max-w-[1280px] mx-auto">
+        <div className="bg-surface-container-low rounded-[40px] py-16 md:py-20 px-5 md:px-12">
           <SectionEntrance>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Comparison Cards */}
@@ -277,9 +277,10 @@ export function WhyMyNannyContent({
       <MatchForm content={marketing.matchForm} />
 
       {/* CTA Slab */}
-      <section className="my-20 mx-5 md:mx-6 rounded-[40px] bg-primary overflow-hidden">
-        <div className="max-w-[800px] mx-auto px-6 py-20 md:py-28 text-center">
-          <SectionEntrance>
+      <section className="my-20 px-5 md:px-6 max-w-[1280px] mx-auto">
+        <div className="rounded-[40px] bg-primary overflow-hidden">
+          <div className="max-w-[800px] mx-auto px-6 py-20 md:py-28 text-center">
+            <SectionEntrance>
             <h2 className="text-[36px] md:text-[52px] font-semibold text-white leading-[1.08]">
               Ready to find your perfect match?
             </h2>
@@ -299,6 +300,7 @@ export function WhyMyNannyContent({
               </Link>
             </div>
           </SectionEntrance>
+          </div>
         </div>
       </section>
     </>

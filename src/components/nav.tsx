@@ -8,7 +8,6 @@ import { PrimaryButton } from './ui/primary-button'
 import { BrandLogo } from './brand-logo'
 import type { NavItem } from '@/lib/cms-types'
 import { DEFAULT_SITE_SETTINGS } from '@/lib/defaults'
-import { COMPANY } from '@/lib/site-content'
 
 type NavProps = {
   items?: NavItem[]
@@ -38,8 +37,8 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
                 key={item.href}
                 href={item.href}
                 className={`text-[14px] xl:text-[15px] whitespace-nowrap transition-colors relative focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded ${isActive
-                    ? 'text-primary font-bold after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full'
-                    : 'text-on-surface-variant hover:text-primary'
+                  ? 'text-primary font-bold after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full'
+                  : 'text-on-surface-variant hover:text-primary'
                   }`}
               >
                 {item.label}
@@ -49,12 +48,9 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
-          <Link
-            href={COMPANY.appUrl}
-            className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:text-brand-pink transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded"
-          >
+          <button className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded">
             Login
-          </Link>
+          </button>
 
           <div className="hidden lg:block">
             <PrimaryButton href="/#match-form" className="!py-2 !px-5 text-sm">
@@ -105,8 +101,8 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={`block text-[18px] py-3.5 px-4 rounded-2xl transition-colors ${isActive
-                        ? 'text-primary font-bold bg-primary-fixed/30'
-                        : 'text-on-surface hover:bg-surface-container'
+                      ? 'text-primary font-bold bg-primary-fixed/30'
+                      : 'text-on-surface hover:bg-surface-container'
                       }`}
                   >
                     {item.label}
@@ -126,13 +122,9 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
               >
                 Hiring Guides
               </PrimaryButton>
-              <Link
-                href={COMPANY.appUrl}
-                className="text-on-surface-variant font-semibold py-3 text-center hover:text-brand-pink transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
+              <button className="text-on-surface-variant font-semibold py-3">
                 Login
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}

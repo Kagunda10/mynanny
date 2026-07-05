@@ -549,8 +549,8 @@ export function ServicesClient({
       </section>
 
       {/* ── 6. Reviews ── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+      <section className="px-5 md:px-6 max-w-[1280px] mx-auto py-12">
+        <div className="bg-white rounded-[40px] py-16 px-5 md:px-12">
           <SectionEntrance>
             <div className="text-center mb-14">
               <EyebrowPill icon="reviews" text="Client Reviews" />

@@ -619,10 +619,13 @@ async function seed() {
   ]
 
   for (const member of team) {
-    try {
+    const existing = await payload.find({
+      collection: 'team',
+      where: { name: { equals: member.name } },
+      limit: 1,
+    })
+    if (!existing.docs.length) {
       await payload.create({ collection: 'team', data: member })
-    } catch {
-      /* may already exist */
     }
   }
   console.log('✅ Team seeded')

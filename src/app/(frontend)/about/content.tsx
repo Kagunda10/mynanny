@@ -52,6 +52,10 @@ export function AboutContent({
 
   const heroParts = about.heroTitle.split('trust')
 
+  const founders = team.filter(
+    (member, index, arr) => arr.findIndex((m) => m.name === member.name) === index,
+  )
+
   return (
     <>
       <section className="relative min-h-[600px] flex items-end pt-32 pb-16 px-5 md:px-6">
@@ -100,7 +104,7 @@ export function AboutContent({
         </div>
       </section>
 
-      <section className="px-5 md:px-6 py-12">
+      <section className="px-5 md:px-6 py-12 max-w-[1280px] mx-auto">
         <SectionEntrance>
           <div className="bg-inverse-surface rounded-[40px] p-12 md:p-16 text-center">
             <div className="max-w-4xl mx-auto">
@@ -123,8 +127,8 @@ export function AboutContent({
         </SectionEntrance>
       </section>
 
-      <section className="py-12 overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6 mb-12">
+      <section className="py-12 overflow-hidden max-w-[1280px] mx-auto">
+        <div className="px-5 md:px-6 mb-12">
           <h2 className="text-[32px] font-semibold">Our Journey</h2>
         </div>
         <div
@@ -156,32 +160,39 @@ export function AboutContent({
         </div>
       </section>
 
-      <section className="py-12 px-5 md:px-6 max-w-[1280px] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] font-semibold mb-4">What Guides Us</h2>
-          <p className="text-on-surface-variant max-w-xl mx-auto">
-            Our values aren&apos;t just words on a wall; they are the filters for every decision we make.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {about.values.map((value, i) => (
-            <SectionEntrance key={value.title} delay={i * 0.1}>
-              <div className="double-bezel">
-                <div className="double-bezel-inner !p-10">
-                  <div className="bg-primary-fixed text-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
-                    <span className="material-symbols-outlined text-3xl">verified</span>
+      <section className="py-16 md:py-20 px-5 md:px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-[32px] font-semibold mb-4">What Guides Us</h2>
+            <p className="text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+              Our values aren&apos;t just words on a wall; they are the filters for every decision we make.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {about.values.map((value, i) => (
+              <SectionEntrance key={value.title} delay={i * 0.1}>
+                <div className="double-bezel h-full">
+                  <div className="double-bezel-inner double-bezel-lift !p-8 md:!p-10 h-full">
+                    <div className="bg-chip-bg w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                      <span
+                        className="material-symbols-outlined text-primary text-[22px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        verified
+                      </span>
+                    </div>
+                    <h4 className="text-[24px] font-medium mb-3">{value.title}</h4>
+                    <p className="text-on-surface-variant leading-relaxed">{value.description}</p>
                   </div>
-                  <h4 className="text-[24px] font-medium mb-4">{value.title}</h4>
-                  <p className="text-on-surface-variant leading-relaxed">{value.description}</p>
                 </div>
-              </div>
-            </SectionEntrance>
-          ))}
+              </SectionEntrance>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="py-12 bg-surface-container-low border-y border-outline-variant/30">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      <section className="py-12 px-5 md:px-6 max-w-[1280px] mx-auto">
+        <div className="bg-surface-container-low border border-outline-variant/30 rounded-[40px] py-12 px-5 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           {about.impactStats.map((stat, i) => (
             <SectionEntrance key={stat.label} delay={i * 0.1}>
               <div>
@@ -202,11 +213,11 @@ export function AboutContent({
         <p className="text-on-surface-variant mb-12 max-w-xl">
           Friends who saw the same gap in Nairobi&apos;s domestic help market and built Mynanny to close it.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
-          {team.map((member) => (
-            <SectionEntrance key={member.name}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          {founders.map((member) => (
+            <SectionEntrance key={member.id ?? member.name}>
               <div className="double-bezel h-full">
-                <div className="double-bezel-inner h-full">
+                <div className="double-bezel-inner double-bezel-lift h-full">
                   {member.image ? (
                     <img src={member.image} alt={member.name} className="w-20 h-20 rounded-full object-cover mb-6" />
                   ) : (

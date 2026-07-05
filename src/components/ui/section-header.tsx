@@ -25,7 +25,7 @@ export function SectionHeader({
       {eyebrow}
       <h2
         className={cn(
-          'text-[28px] md:text-heading font-semibold leading-[1.2] tracking-tight',
+          'text-[32px] font-semibold leading-[1.2] tracking-tight',
           eyebrow ? 'mt-6' : undefined,
           titleClassName,
         )}

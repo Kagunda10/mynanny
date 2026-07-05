@@ -334,8 +334,8 @@ export function JoinContent() {
       </section>
 
       {/* ── 4. Onboarding Process ────────────────────────────── */}
-      <section id="process" className="bg-surface-container-low py-16 md:py-24 scroll-mt-28">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+      <section id="process" className="px-5 md:px-6 max-w-[1280px] mx-auto scroll-mt-28">
+        <div className="bg-surface-container-low rounded-[40px] py-16 md:py-24 px-5 md:px-12">
           <SectionEntrance>
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-[28px] md:text-[36px] font-semibold mb-4">
@@ -370,8 +370,8 @@ export function JoinContent() {
       <SOSPhoneDemo />
 
       {/* ── 6. Worker Testimonials ───────────────────────────── */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+      <section className="px-5 md:px-6 max-w-[1280px] mx-auto py-12">
+        <div className="bg-white rounded-[40px] py-16 md:py-24 px-5 md:px-12">
           <SectionEntrance>
             <h2 className="text-[28px] md:text-[36px] font-semibold text-center mb-12">
               What our community says

@@ -495,12 +495,21 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
     const payload = await getPayload()
     const { docs } = await payload.find({ collection: 'team', sort: 'order', limit: 20 })
     if (!docs.length) return defaultTeam
-    return docs.map((t: Team) => ({
-      name: t.name,
-      role: t.role,
-      bio: t.bio ?? undefined,
-      image: typeof t.photo === 'object' && t.photo?.url ? t.photo.url : undefined,
-    }))
+
+    const seen = new Set<string>()
+    return docs
+      .map((t: Team) => ({
+        id: String(t.id),
+        name: t.name,
+        role: t.role,
+        bio: t.bio ?? undefined,
+        image: typeof t.photo === 'object' && t.photo?.url ? t.photo.url : undefined,
+      }))
+      .filter((member) => {
+        if (seen.has(member.name)) return false
+        seen.add(member.name)
+        return true
+      })
   }, defaultTeam)
 }
 

@@ -1,12 +1,10 @@
 'use client'
 
-import Link from 'next/link'
 import { SectionEntrance } from '@/components/motion/section-entrance'
 import { SectionHeader } from '@/components/ui/section-header'
 import { motion } from 'motion/react'
 import type { TestimonialReview } from '@/lib/cms-types'
 import { DEFAULT_HOMEPAGE, DEFAULT_TESTIMONIALS } from '@/lib/defaults'
-import { COMPANY } from '@/lib/site-content'
 
 function Stars({ count }: { count: number }) {
   return (
@@ -36,8 +34,8 @@ export function GoogleReviews({
   reviewCount = DEFAULT_HOMEPAGE.reviewCount,
 }: GoogleReviewsProps) {
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+    <section className="py-12 px-5 md:px-6 max-w-[1280px] mx-auto">
+      <div className="bg-white rounded-[40px] py-12 px-5 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <SectionHeader
             title="What Nairobi parents say"
@@ -54,15 +52,10 @@ export function GoogleReviews({
             className="mb-0"
             subtitleClassName="mx-0"
           />
-          <Link
-            href={COMPANY.googleReviewsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-pink font-bold flex items-center gap-2 border-b-2 border-brand-pink/20 pb-1 hover:border-brand-pink/50 transition-colors"
-          >
+          <button className="text-primary font-bold flex items-center gap-2 border-b-2 border-primary/20 pb-1">
             Read all Google Reviews
             <span className="material-symbols-outlined">arrow_outward</span>
-          </Link>
+          </button>
         </div>
 
         <SectionEntrance>
