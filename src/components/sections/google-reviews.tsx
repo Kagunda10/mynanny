@@ -52,10 +52,10 @@ export function GoogleReviews({
             className="mb-0"
             subtitleClassName="mx-0"
           />
-          <button className="text-primary font-bold flex items-center gap-2 border-b-2 border-primary/20 pb-1">
+          <a href="https://g.page/r/your-google-cid-url/review" target="_blank" rel="noopener noreferrer" className="text-primary font-bold flex items-center gap-2 border-b-2 border-primary/20 pb-1">
             Read all Google Reviews
             <span className="material-symbols-outlined">arrow_outward</span>
-          </button>
+          </a>
         </div>
 
         <SectionEntrance>

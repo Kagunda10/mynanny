@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 const LOGO_SRC = {
   'horizontal-color': '/brand/svg/lockup-horizontal-color.svg',
@@ -25,13 +26,12 @@ export function BrandLogo({
   priority = false,
 }: BrandLogoProps) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={LOGO_SRC[variant]}
       alt="MyNanny"
       width={variant.startsWith('horizontal') ? 136 : 40}
       height={variant.startsWith('horizontal') ? 40 : variant.startsWith('stacked') ? 120 : 40}
-      fetchPriority={priority ? 'high' : undefined}
+      priority={priority}
       className={cn('h-auto w-auto max-h-full object-contain', className)}
     />
   )

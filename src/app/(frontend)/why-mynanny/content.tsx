@@ -18,6 +18,28 @@ import { DEFAULT_MARKETING } from '@/lib/extended-defaults'
 import { motion } from 'motion/react'
 import Link from 'next/link'
 
+const TRADITIONAL_COMPARISON_ITEMS = [
+  'Verbal references',
+  'One-time transaction',
+  'No contract',
+  'Variable pricing',
+] as const
+
+const MYNANNY_COMPARISON_ITEMS = [
+  {
+    title: 'Deep Background Vetting',
+    description: 'Police clearance & physical home verification.',
+  },
+  {
+    title: 'Continuous Support',
+    description: 'Ongoing mediation and replacement guarantee.',
+  },
+  {
+    title: 'Transparent Fixed Pricing',
+    description: "No hidden commissions or daily 'fee' tracking.",
+  },
+] as const
+
 type WhyMyNannyContentProps = {
   coverage?: CoverageContent
   testimonials?: TestimonialReview[]
@@ -61,84 +83,132 @@ export function WhyMyNannyContent({
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 px-5 md:px-6 max-w-[1280px] mx-auto">
-        <div className="bg-surface-container-low rounded-[40px] py-16 md:py-20 px-5 md:px-12">
-          <SectionEntrance>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Comparison Cards */}
-              <div className="relative min-h-[420px] flex items-center justify-center">
+      <section className="overflow-visible py-20 px-5 md:px-6 max-w-[1280px] mx-auto">
+        <SectionEntrance className="overflow-visible">
+          <div className="mb-14 text-center md:mb-16">
+            <h2 className="text-[34px] font-semibold tracking-tight text-on-surface md:text-[44px]">
+              The MyNanny Difference
+            </h2>
+            <p className="mt-3 text-[16px] text-on-surface-variant md:text-[18px]">
+              How we redefine domestic service recruitment.
+            </p>
+          </div>
+
+          <div className="grid items-center gap-12 overflow-visible md:grid-cols-2 lg:gap-16">
+            {/* Comparison Cards */}
+            <div className="relative mx-auto w-full max-w-[380px] overflow-visible sm:max-w-[420px] md:mx-0 md:max-w-none">
+              <div className="relative min-h-[380px] w-full overflow-visible sm:min-h-[420px] md:min-h-[440px]">
                 <motion.div
-                  className="absolute w-[280px] md:w-[300px] bg-white/60 backdrop-blur-sm border border-outline-variant/40 rounded-2xl p-6 shadow-sm"
-                  style={{ rotate: -2 }}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="absolute left-0 top-0 z-0 w-[min(calc(100%-1.5rem),340px)] rounded-[22px] border border-primary-fixed/25 bg-[#FFF9FA] p-6 shadow-[0_8px_24px_rgba(144,0,52,0.06)] sm:p-7 sm:w-[340px]"
+                  style={{ rotate: -2.5 }}
+                  initial={{ opacity: 0, x: -16, y: 8 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant/50 mb-5">
-                    Traditional Bureaus
-                  </p>
-                  <ul className="space-y-4">
-                    {[
-                      'Verbal references only',
-                      'One-time transaction',
-                      'No written contract',
-                      'Variable pricing',
-                    ].map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-[14px] text-on-surface-variant/70">
-                        <span className="material-symbols-outlined text-error !text-[20px]">close</span>
-                        {item}
+                  <div className="mb-5 flex items-center gap-3">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-error text-white">
+                      <span className="material-symbols-outlined !text-[16px]">close</span>
+                    </span>
+                    <p className="text-[15px] font-semibold text-on-surface-variant/75">
+                      Traditional Bureaus
+                    </p>
+                  </div>
+                  <ul className="space-y-3.5">
+                    {TRADITIONAL_COMPARISON_ITEMS.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-center gap-2.5 text-[14px] leading-snug text-on-surface-variant/65"
+                      >
+                        <span className="material-symbols-outlined shrink-0 text-error !text-[16px]">
+                          close
+                        </span>
+                        <span className="min-w-0">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </motion.div>
 
                 <motion.div
-                  className="relative ml-20 mt-12 md:ml-24 w-[280px] md:w-[300px] bg-white border-2 border-primary/20 rounded-2xl p-6 shadow-xl z-10 hover:scale-[1.02] transition-transform duration-500"
-                  style={{ rotate: 1 }}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="absolute left-7 top-16 z-10 w-[min(calc(100%-1.5rem),340px)] rounded-[22px] border border-primary/[0.08] bg-white p-6 shadow-[0_22px_50px_-14px_rgba(144,0,52,0.18)] transition-transform duration-500 hover:scale-[1.01] sm:left-[64px] sm:top-[72px] sm:p-7 sm:w-[340px] md:left-[72px] md:top-[76px]"
+                  style={{ rotate: 0.5 }}
+                  initial={{ opacity: 0, x: 16, y: 12 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.15 }}
+                  transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary mb-5">
-                    The MyNanny Way
-                  </p>
+                  <span className="absolute right-5 top-5 rounded-full bg-secondary px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                    BETTER
+                  </span>
+                  <div className="mb-5 flex items-center gap-3 pr-14">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                      <span
+                        className="material-symbols-outlined !text-[18px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                      >
+                        star
+                      </span>
+                    </span>
+                    <p className="font-display text-[17px] font-semibold leading-tight text-primary md:text-[18px]">
+                      The MyNanny Way
+                    </p>
+                  </div>
                   <ul className="space-y-4">
-                    {[
-                      'Deep Background Vetting',
-                      'Continuous Support',
-                      'Transparent Fixed Pricing',
-                    ].map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-[14px] font-medium text-on-surface">
-                        <span className="material-symbols-outlined text-verified-green !text-[20px]">
-                          check_circle
+                    {MYNANNY_COMPARISON_ITEMS.map((item) => (
+                      <li key={item.title} className="flex gap-3">
+                        <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary text-white">
+                          <span className="material-symbols-outlined !text-[14px]">check</span>
                         </span>
-                        {item}
+                        <div className="min-w-0">
+                          <p className="text-[14px] font-semibold leading-snug text-on-surface">
+                            {item.title}
+                          </p>
+                          <p className="mt-0.5 text-[13px] leading-relaxed text-on-surface-variant/90">
+                            {item.description}
+                          </p>
+                        </div>
                       </li>
                     ))}
                   </ul>
                 </motion.div>
               </div>
+            </div>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="double-bezel">
-                  <div className="double-bezel-inner double-bezel-lift text-center">
-                    <CountUp target={98} suffix="%" className="text-[48px] font-semibold text-primary" />
-                    <p className="mt-2 text-[14px] text-on-surface-variant">Family Retention Rate</p>
-                  </div>
+            {/* Copy + stats */}
+            <div className="md:pl-2 lg:pl-6">
+              <h3 className="text-[26px] font-semibold leading-tight tracking-tight text-on-surface md:text-[32px]">
+                Designed for the Modern Nairobi Parent
+              </h3>
+              <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-on-surface-variant md:text-[16px]">
+                We understand that in a bustling city like Nairobi, your peace of mind is priceless.
+                That&apos;s why we&apos;ve moved away from the chaotic &apos;bureau&apos; model to a
+                digital-first, human-centered experience.
+              </p>
+              <div className="mt-8 grid max-w-md grid-cols-2 gap-3 sm:gap-4">
+                <div className="rounded-[18px] bg-chip-bg px-4 py-7 sm:px-5">
+                  <CountUp
+                    target={98}
+                    suffix="%"
+                    className="font-display block text-[38px] font-semibold leading-none text-primary sm:text-[44px]"
+                  />
+                  <p className="mt-2.5 text-[13px] font-medium text-on-surface sm:text-[14px]">
+                    Retention Rate
+                  </p>
                 </div>
-                <div className="double-bezel">
-                  <div className="double-bezel-inner double-bezel-lift text-center">
-                    <CountUp target={1200} suffix="+" className="text-[48px] font-semibold text-secondary" />
-                    <p className="mt-2 text-[14px] text-on-surface-variant">Families Served</p>
-                  </div>
+                <div className="rounded-[18px] bg-chip-bg px-4 py-7 sm:px-5">
+                  <CountUp
+                    target={1200}
+                    suffix="+"
+                    className="font-display block text-[38px] font-semibold leading-none text-secondary sm:text-[44px]"
+                  />
+                  <p className="mt-2.5 text-[13px] font-medium text-on-surface sm:text-[14px]">
+                    Families Served
+                  </p>
                 </div>
               </div>
             </div>
-          </SectionEntrance>
-        </div>
+          </div>
+        </SectionEntrance>
       </section>
 
       {/* Vetting Bento Grid */}

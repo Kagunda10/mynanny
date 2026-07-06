@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { WhatsAppFab } from '@/components/whatsapp-fab'
@@ -10,6 +11,23 @@ const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-sans',
+  display: 'swap',
+})
+
+const clashDisplay = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/ClashDisplay-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/fonts/ClashDisplay-Semibold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-display',
   display: 'swap',
 })
 
@@ -61,14 +79,10 @@ export default async function FrontendLayout({ children }: { children: React.Rea
   const siteSettings = await getSiteSettings()
 
   return (
-    <html lang="en" className={plusJakarta.variable}>
+    <html lang="en" className={`${plusJakarta.variable} ${clashDisplay.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap"
           rel="stylesheet"
         />
       </head>

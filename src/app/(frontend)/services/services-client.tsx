@@ -8,6 +8,7 @@ import { EyebrowPill } from '@/components/ui/eyebrow-pill'
 import { DoubleBevelCard } from '@/components/ui/double-bezel-card'
 import type { ServiceCard, TestimonialReview } from '@/lib/cms-types'
 import { DEFAULT_SERVICES, DEFAULT_TESTIMONIALS } from '@/lib/defaults'
+import Image from 'next/image'
 
 /* ─── data (fallback when CMS unavailable) ─── */
 
@@ -124,10 +125,8 @@ const FALLBACK_REVIEWS = [
   },
 ] as const
 
-const BEFORE_IMG =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDq69uICFOgx0SmJ0XlzboIQNBT_Gz93o1FiVw9ILkR0kWnazPVPVwOX00ZC94AlncrE1KvSiUPpp0_zb7_7uFs8cc7DZGccCwpj8Ejvuo_t16zdFkD3elMMrOsBB-MW7-S5SnzBTWj36yu4gg7Z965xV0ZN7EUUzfjUmjrNBOfU6w7Q6xBPe0QsDOt3u1T81XH7MTJS9V5pqqM753MDko90lmamiy0PSioU6x_V72rEsbDdZo9FpPF0w'
-const AFTER_IMG =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDjDSMJheYtA6yQW_tyMt4y03yJD4pJpmGv8Ba52bGtTGkvmcJxN5hVctoxlbdX5WnEG83tMyp_WqF2nNIcW87dK8NDJtnoZnfdO8yq7mAD-Ywk-qRXDiavqSzvMzoRmxdPsYi0l_blDUd6d1R3rsWiWmU3ZYkCuqvGTzkrNofpZ95GX8hkQzZ_Po1troC_PCrmWFEry_nV44hxUsICty0tIcTnbdUWUGGZ995IJLdg8gnw5DzaCCVV-w'
+const BEFORE_IMG = '/images/services/cleaning-before.jpg'
+const AFTER_IMG = '/images/services/cleaning-after.jpg'
 
 /* ─── animated total ─── */
 
@@ -196,6 +195,14 @@ function BeforeAfterSlider() {
     dragging.current = false
   }, [])
 
+  const onKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      setPos((p) => Math.max(0, p - 5))
+    } else if (e.key === 'ArrowRight') {
+      setPos((p) => Math.min(100, p + 5))
+    }
+  }, [])
+
   return (
     <div
       ref={containerRef}
@@ -205,17 +212,26 @@ function BeforeAfterSlider() {
       onPointerUp={onPointerUp}
     >
       {/* after (full) */}
-      <img src={AFTER_IMG} alt="After cleaning" className="absolute inset-0 w-full h-full object-cover" />
+      <Image src={AFTER_IMG} alt="After cleaning" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
       {/* before (clipped) */}
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-        <img src={BEFORE_IMG} alt="Before cleaning" className="w-full h-full object-cover" />
+        <Image src={BEFORE_IMG} alt="Before cleaning" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
       </div>
       {/* handle */}
       <div
         className="absolute top-0 bottom-0 w-1 bg-white shadow-lg z-10"
         style={{ left: `${pos}%`, transform: 'translateX(-50%)' }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-on-surface text-xl leading-none">
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-on-surface text-xl leading-none focus:outline-none focus:ring-2 focus:ring-brand-pink"
+          tabIndex={0}
+          role="slider"
+          aria-valuenow={Math.round(pos)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label="Before and after comparison slider"
+          onKeyDown={onKeyDown}
+        >
           ↔
         </div>
       </div>
@@ -291,11 +307,14 @@ export function ServicesClient({
             className="relative"
           >
             <div className="double-bezel max-w-[420px] mx-auto">
-              <div className="double-bezel-inner !p-0 overflow-hidden">
-                <img
-                  className="w-full aspect-[4/5] object-cover"
+              <div className="double-bezel-inner !p-0 overflow-hidden relative aspect-[4/5] w-full">
+                <Image
+                  className="object-cover"
                   src={serviceCards[0]?.image ?? ''}
                   alt="Professional nanny caring for a child"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  priority
                 />
               </div>
             </div>
@@ -385,7 +404,7 @@ export function ServicesClient({
                   <p className="text-white/40 text-sm mb-8">
                     *Pricing may vary based on specific home size and requirements
                   </p>
-                  <PrimaryButton href="/join" icon="arrow_forward">
+                  <PrimaryButton href="/#match-form" icon="arrow_forward">
                     Book Now
                   </PrimaryButton>
                 </div>
@@ -412,14 +431,20 @@ export function ServicesClient({
           {serviceCards.map((card, i) => (
             <SectionEntrance key={card.title} delay={i * 0.1}>
               <DoubleBevelCard innerClassName="!p-0 overflow-hidden">
-                <div className="relative overflow-hidden">
-                  <motion.img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full aspect-[4/3] object-cover"
+                <div className="relative overflow-hidden aspect-[4/3] w-full">
+                  <motion.div
+                    className="w-full h-full"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  />
+                  >
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </motion.div>
                   <span
                     className={`absolute top-4 left-4 ${card.tagColor} text-xs font-bold px-3 py-1 rounded-full`}
                   >

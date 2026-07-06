@@ -9,6 +9,7 @@ import { PrimaryButton } from '@/components/ui/primary-button'
 import { COMPANY } from '@/lib/site-content'
 import type { AboutContent, TeamMember, TimelineItem } from '@/lib/cms-types'
 import { DEFAULT_ABOUT, DEFAULT_TIMELINE } from '@/lib/extended-defaults'
+import Image from 'next/image'
 
 const STAT_COLORS = {
   primary: 'text-primary',
@@ -127,9 +128,25 @@ export function AboutContent({
         </SectionEntrance>
       </section>
 
-      <section className="py-12 overflow-hidden max-w-[1280px] mx-auto">
-        <div className="px-5 md:px-6 mb-12">
+      <section className="py-12 overflow-hidden max-w-[1280px] mx-auto relative">
+        <div className="px-5 md:px-6 mb-12 flex justify-between items-center">
           <h2 className="text-[32px] font-semibold">Our Journey</h2>
+          <div className="hidden md:flex gap-2">
+            <button 
+              onClick={() => scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+              className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors"
+              aria-label="Scroll left"
+            >
+              <span className="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button 
+              onClick={() => scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+              className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors"
+              aria-label="Scroll right"
+            >
+              <span className="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
         </div>
         <div
           ref={scrollRef}
@@ -137,7 +154,7 @@ export function AboutContent({
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className="flex overflow-x-auto gap-6 px-5 md:px-6 pb-12 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing select-none"
+          className="flex overflow-x-auto gap-6 px-5 md:px-6 pb-12 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none"
         >
           {timeline.map((item) => (
             <div key={item.year + item.title} className="snap-start min-w-[320px] md:min-w-[400px]">
@@ -149,8 +166,8 @@ export function AboutContent({
                     <p className="text-on-surface-variant">{item.description}</p>
                   </div>
                   {item.image && (
-                    <div className="mt-8 h-48 rounded-xl overflow-hidden">
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    <div className="mt-8 h-48 rounded-xl overflow-hidden relative">
+                      <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
                     </div>
                   )}
                 </div>
@@ -219,7 +236,9 @@ export function AboutContent({
               <div className="double-bezel h-full">
                 <div className="double-bezel-inner double-bezel-lift h-full">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-20 h-20 rounded-full object-cover mb-6" />
+                    <div className="w-20 h-20 rounded-full mb-6 relative overflow-hidden">
+                      <Image src={member.image} alt={member.name} fill className="object-cover" sizes="80px" />
+                    </div>
                   ) : (
                     <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <span className="text-[28px] font-bold text-primary">{member.name[0]}</span>

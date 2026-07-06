@@ -48,9 +48,9 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
-          <button className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded">
+          <Link href="/login" className="hidden lg:block text-on-surface-variant text-sm font-semibold hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded">
             Login
-          </button>
+          </Link>
 
           <div className="hidden lg:block">
             <PrimaryButton href="/#match-form" className="!py-2 !px-5 text-sm">
@@ -122,9 +122,9 @@ export function Nav({ items = DEFAULT_SITE_SETTINGS.navItems }: NavProps) {
               >
                 Hiring Guides
               </PrimaryButton>
-              <button className="text-on-surface-variant font-semibold py-3">
+              <Link href="/login" className="text-on-surface-variant font-semibold py-3 text-center block">
                 Login
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}

@@ -4,6 +4,7 @@ import { SectionEntrance } from '@/components/motion/section-entrance'
 import { BrandLogo } from '@/components/brand-logo'
 import type { MarketingContent } from '@/lib/cms-types'
 import { DEFAULT_MARKETING } from '@/lib/extended-defaults'
+import Image from 'next/image'
 
 type AppCTAProps = {
   content?: MarketingContent['appCta']
@@ -56,7 +57,9 @@ export function AppCTA({ content = DEFAULT_MARKETING.appCta }: AppCTAProps) {
               <BrandLogo variant="app-icon" className="h-8 w-8 rounded-xl" />
               <span className="text-[13px] font-bold text-on-surface">MyNanny</span>
             </div>
-            <img className="w-full flex-1 object-cover rounded-t-[30px]" src={content.image} alt="MyNanny app dashboard" />
+            <div className="relative w-full flex-1 rounded-t-[30px] overflow-hidden">
+              <Image className="object-cover" src={content.image} alt="MyNanny app dashboard" fill sizes="256px" />
+            </div>
           </div>
         </div>
       </div>

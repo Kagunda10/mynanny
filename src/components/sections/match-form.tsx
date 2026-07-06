@@ -27,6 +27,8 @@ export function MatchForm({ content = DEFAULT_MARKETING.matchForm }: MatchFormPr
         type: 'match',
         service: String(data.get('service') ?? ''),
         neighborhood: String(data.get('neighborhood') ?? ''),
+        email: String(data.get('email') ?? ''),
+        phone: String(data.get('phone') ?? ''),
         message: String(data.get('message') ?? ''),
       })
 
@@ -90,6 +92,32 @@ export function MatchForm({ content = DEFAULT_MARKETING.matchForm }: MatchFormPr
                         type="text"
                         required
                         placeholder="e.g. Kilimani"
+                        className="w-full border border-outline-variant/50 rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[14px] font-bold mb-2" htmlFor="match-email">
+                        Email Address
+                      </label>
+                      <input
+                        id="match-email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="you@example.com"
+                        className="w-full border border-outline-variant/50 rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[14px] font-bold mb-2" htmlFor="match-phone">
+                        Phone Number
+                      </label>
+                      <input
+                        id="match-phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder="e.g. 0712 345 678"
                         className="w-full border border-outline-variant/50 rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none"
                       />
                     </div>

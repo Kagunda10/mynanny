@@ -7,6 +7,7 @@ import { CountUp } from '@/components/motion/count-up'
 import { ParallaxBlob } from '@/components/motion/parallax-blob'
 import type { HomepageContent } from '@/lib/cms-types'
 import { DEFAULT_HOMEPAGE } from '@/lib/defaults'
+import Image from 'next/image'
 
 const TRUST_CHIPS = [
   {
@@ -19,7 +20,7 @@ const TRUST_CHIPS = [
   {
     icon: 'security',
     title: 'Police Clearance',
-    subtitle: 'Verified Oct 2024',
+    subtitle: `Verified ${new Date().toLocaleString('default', { month: 'short', year: 'numeric' })}`,
     subtitleClass: 'text-on-surface-variant',
   },
 ] as const
@@ -29,8 +30,8 @@ function TrustChip({ chip }: { chip: (typeof TRUST_CHIPS)[number] }) {
     <div className="double-bezel">
       <div className="double-bezel-inner !p-3 flex items-center gap-3">
         {'avatar' in chip ? (
-          <div className="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden shrink-0">
-            <img className="w-full h-full object-cover" src={chip.avatar} alt={chip.title} />
+          <div className="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden shrink-0 relative">
+            <Image className="object-cover" src={chip.avatar} alt={chip.title} fill sizes="40px" />
           </div>
         ) : (
           <span className="material-symbols-outlined text-verified-green bg-green-50 p-2 rounded-full shrink-0">
@@ -120,10 +121,10 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
         </div>
 
         <div className="flex flex-wrap items-center gap-8 opacity-40 grayscale contrast-125">
-          <span className="font-bold text-lg">Business Daily</span>
-          <span className="font-bold text-lg">TechCabal</span>
-          <span className="font-bold text-lg">Nation</span>
-          <span className="font-bold text-lg">Capital FM</span>
+          <Image src="/images/logos/business-daily.svg" alt="Business Daily" width={120} height={32} className="h-8 w-auto" />
+          <Image src="/images/logos/techcabal.svg" alt="TechCabal" width={120} height={32} className="h-8 w-auto" />
+          <Image src="/images/logos/nation.svg" alt="Nation" width={120} height={32} className="h-8 w-auto" />
+          <Image src="/images/logos/capital-fm.svg" alt="Capital FM" width={120} height={32} className="h-8 w-auto" />
         </div>
       </motion.div>
 
@@ -136,10 +137,13 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
         <div className="relative w-full max-w-[400px] mx-auto aspect-[4/5]">
           <div className="absolute inset-0 bg-dark-ink rounded-[40px] shadow-2xl p-3">
             <div className="bg-white h-full w-full rounded-[30px] overflow-hidden relative">
-              <img
-                className="w-full h-full object-cover"
+              <Image
+                className="object-cover"
                 src={content.heroImage}
                 alt="MyNanny mobile app showing a verified nanny profile"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                priority
               />
             </div>
           </div>
@@ -147,11 +151,13 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
           <ParallaxBlob className="absolute -left-12 top-1/4 z-10 hidden md:block" duration={4} distance={8}>
             <div className="double-bezel w-48">
               <div className="double-bezel-inner !p-3 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover"
+                <div className="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden relative">
+                  <Image
+                    className="object-cover"
                     src={TRUST_CHIPS[0].avatar}
                     alt="Mary W. - rated nanny"
+                    fill
+                    sizes="40px"
                   />
                 </div>
                 <div>
@@ -170,7 +176,7 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
                 </span>
                 <div>
                   <p className="text-[14px] font-bold">Police Clearance</p>
-                  <p className="text-[12px] text-on-surface-variant">Verified Oct 2024</p>
+                  <p className="text-[12px] text-on-surface-variant">{`Verified ${new Date().toLocaleString('default', { month: 'short', year: 'numeric' })}`}</p>
                 </div>
               </div>
             </div>

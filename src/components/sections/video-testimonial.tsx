@@ -1,6 +1,7 @@
 'use client'
 
 import { SectionEntrance } from '@/components/motion/section-entrance'
+import Image from 'next/image'
 
 export function VideoTestimonial() {
   return (
@@ -8,11 +9,13 @@ export function VideoTestimonial() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative group cursor-pointer">
           <div className="double-bezel">
-            <div className="double-bezel-inner !p-0 overflow-hidden relative aspect-video">
-              <img
-                className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNaojyBXRPSkFohy4uS1S3AxQc3R9o66WQgiWwW53SA_22Su0MreWYPGc1eKMOINU2fIivnmEurUHyfRiGkqO7O0wTte9WgkjpZDfPmMyTdG6sPjfvtMyTmNyqOZaMyXBc2xyT4kWvraWb68P4WFRECg_o7BrEff2I8KWLTjgtc8DSyZomrFhU1Dybczkye73pVyW8J4lQHE7CvXOOUoNi8Y735sgjTZWEkE8NtcwLwn9CaETcQCRs2A"
+            <div className="double-bezel-inner !p-0 overflow-hidden relative aspect-video w-full">
+              <Image
+                className="object-cover"
+                src="/images/testimonials/family-video-thumb.jpg"
                 alt="Happy family in Nairobi suburb"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">

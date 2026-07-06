@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { SectionEntrance } from '@/components/motion/section-entrance'
 import { SectionHeader } from '@/components/ui/section-header'
 import type { ArticlePreview } from '@/lib/cms-types'
@@ -25,12 +26,14 @@ export function BlogPreview({ articles = DEFAULT_ARTICLES.slice(0, 3) }: BlogPre
           {articles.map((article) => (
             <Link key={article.slug} href={`/guides/${article.slug}`} className="group">
               <div className="double-bezel mb-4 overflow-hidden">
-                <div className="double-bezel-inner !p-0 aspect-[16/10] overflow-hidden">
+                <div className="double-bezel-inner !p-0 aspect-[16/10] overflow-hidden relative w-full">
                   {article.image ? (
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    <Image
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       src={article.image}
                       alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   ) : (
                     <div className="w-full h-full bg-surface-container-low" />

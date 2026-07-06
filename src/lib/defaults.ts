@@ -17,8 +17,7 @@ export const DEFAULT_HOMEPAGE: HomepageContent = {
     'Skip the bureaus. We provide vetted, background-checked domestic professionals for Kilimani, Lavington, and the wider Nairobi area.',
   heroCtaText: 'Get Matched Free',
   heroCtaUrl: '#match-form',
-  heroImage:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuBsvOyGgG_ubTJGnDtltgD1mUj_8tgY8oKdfyNzIYe2IqtP3iu9IWRR8XQeT7dS-A_UNWd3KqB781YTv5BiJelKVEU2scTOj3TuT5M_crAy9rUOH_VwqcHVxSR24CF_UvXzaBcd1ympCmpVm6qN1I9UXZb1a5CJ5_zPEbcCPMybGj2knoyEv1sWUsm79jLhkfRrzgewyeUQXsFyGbzAsIM2BPiDfbJBSHCYBfhSQXVBuQh0au4AqF_eCw',
+  heroImage: '/images/hero-app-mockup.jpg',
   stats: [
     { label: 'Vetted Workers', value: '2,340+', numericTarget: 2340, suffix: '+' },
     { label: 'User Rating', value: '4.8', numericTarget: 4.8 },
@@ -310,8 +309,7 @@ export const DEFAULT_SERVICES: ServiceCard[] = [
     popular: true,
     tag: 'Most Popular',
     tagColor: 'bg-brand-pink text-white',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCXFJ9XS89vtYtU60o8tCLzltBtY966RzRuVNFi0InIqurRjhEvRbKntQrj2AaIv6UoaR51SLEiKUv4WavRVeFi3rz1oGEOs2osN17dhjYIDEm80FAQ4z4rGIXH7AaywS1bK7PfcKlHoeELNQjhpn5J4WNxt6aQ4KcpEptnnE3UF1hPkZr93we30nQDBhJp11uTQiW9P4PbGyNjnTMEeXuwuCsbqas_8RyeYoi2wR5kmKaHvMYUKnSjNQ',
+    image: '/images/services/nanny.jpg',
   },
   {
     name: 'Deep Cleaning',
@@ -324,8 +322,7 @@ export const DEFAULT_SERVICES: ServiceCard[] = [
     popular: true,
     tag: 'Premium',
     tagColor: 'bg-secondary text-white',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDUh5rwok4xvFAYCfQji6uX76khNqk_sxy5tqHMasVkocrxqTEp8_lUUrcpDUq3L5t8wykNsyepQqPyZgj-Xh4Lv1BcES6K3rWX-B_D697nw4Sx52Y4c_YCnr-MZxoA2tIpKEFKWu1U3xpZAYATxEUkPfQa1mZbaqyPsFN1sYD2cOuBanu4gVwraqd4I4mIFLCt35AtRJIMzwnrRcQ8WY07gM8kOytWrbAvFUz9R46Cnqt_rx_RSh_leQ',
+    image: '/images/services/cleaning.jpg',
   },
   {
     name: 'Elderly Care',
@@ -338,8 +335,7 @@ export const DEFAULT_SERVICES: ServiceCard[] = [
     popular: false,
     tag: 'Compassionate',
     tagColor: 'bg-tertiary text-white',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBUAkTmk04Z5f4XqQVXGxJGslD5twGCTQHXCID7lf4gmQdMuo2bR0q2xaTleZuPHU1XinlwN-RyVKkEqHBjcy6uz7IBIPjSZZbwjgbPnTychsEAFO4gBPyaiEAc_Mr1CINKUyiCQbL87IOL44W10A9gKeB4Y9saIX43CoKW-_AHcY7ecFAhfxiWJGMFU_cojBHNi3LrprXrjhYCBLlHItHtoJwq4hk2VzzmZdvHpTKil6JK8aGSX62EuA',
+    image: '/images/services/elderly.jpg',
   },
 ]
 
@@ -353,8 +349,7 @@ export const DEFAULT_ARTICLES: ArticlePreview[] = [
     readTime: '8 min read',
     featured: true,
     author: 'Wanjiku Maina',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAr17RIgft-IyaMcgnJExnJnulLVG78biOB2JKtGGr1Gt71DoK6Say3Ri6id9WuhvMHYZBIzeR4jQqnkueIpNFI-aYBnjYZyaWDIn-16tbGoMe1sqrAuscKPxVQxLSxEjFugtBkQSPpz0PV4-Y36e4trtaw__fFvD4DX4ITKaSqSLH0LzEc3uspXk6J3ZDzQ53wyAF744iuM8tE2jXhmD9KmXUs0N3yAAifUmDfp-Vmhqj01S6wovFM_w',
+    image: '/images/articles/nanny-costs.jpg',
   },
   {
     slug: 'nhif-nssf-guide-nairobi-homeowners',
@@ -362,8 +357,7 @@ export const DEFAULT_ARTICLES: ArticlePreview[] = [
     excerpt: 'Stay compliant with the latest Ministry of Labour guidelines for domestic workers.',
     category: 'Legal',
     readTime: '6 min read',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD7XVoCr7oAjY5THg6dnykSPIBS-X0j1kpU-hjtAqGOCgo_qi-hnfqfaqZVCxuXbK88GCisal_Mw6iEmRekxQ5VeopII5eBKKNTvGV27ptNF-2uautp5X1TW0SYLeujGChQqbxC_zewxO7_JhnJWB0BPf511dLTefWkcqUmVxdv8FvKtwHPYn3ILyKP8tRNcJ9FujyoaE-ttIzyZDI3Rrq1FMRrrJZnQc5sNGSOVcQoEpPxKw1kWQtWJw',
+    image: '/images/articles/nhif-nssf.jpg',
   },
   {
     slug: 'ultimate-deep-cleaning-checklist',
@@ -371,7 +365,6 @@ export const DEFAULT_ARTICLES: ArticlePreview[] = [
     excerpt: 'The exact 48 points our professionals check to ensure your home is truly clean.',
     category: 'Maintenance',
     readTime: '5 min read',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCz9qjJEm8k78bPtzETnqhE-rg26brX50w0wJUeeg9tJfB2aWhT9HHJB2h-G5I6MsKnPmQ0BriMCXXSty2CENhsh_KagjNCfkDFHiMBs3NIO6zoY5pcT1UwoiWQR1_6iFHXfL4jN-KbsKtipY5KEtZr1gj885vWW6xum6L9QzXsLchtZdQcX9eYi8AEFOdEsawYXPCZ7Vem9L9LFF5Okynvf3zwGOVc_5IDC5DftSMqpa0X5Rkh_weNXg',
+    image: '/images/articles/cleaning-checklist.jpg',
   },
 ]

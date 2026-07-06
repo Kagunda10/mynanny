@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform } from 'motion/react'
 import { type ReactNode, useRef } from 'react'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 interface PrimaryButtonProps {
   children: ReactNode
@@ -14,6 +15,8 @@ interface PrimaryButtonProps {
   type?: 'button' | 'submit'
   disabled?: boolean
   showIcon?: boolean
+  target?: string
+  rel?: string
 }
 
 export function PrimaryButton({
@@ -26,6 +29,8 @@ export function PrimaryButton({
   type = 'button',
   disabled = false,
   showIcon = true,
+  target,
+  rel,
 }: PrimaryButtonProps) {
   const ref = useRef<HTMLButtonElement>(null)
   const x = useMotionValue(0)
@@ -73,27 +78,87 @@ export function PrimaryButton({
   )
 
   if (variant !== 'primary') {
-    const Tag = href ? 'a' : 'button'
+    if (href) {
+      const isInternal = href.startsWith('/')
+      if (isInternal) {
+        return (
+          <Link
+            href={href}
+            onClick={onClick}
+            className={cn(baseClasses[variant], disabled && 'opacity-60 pointer-events-none', className)}
+          >
+            {children}
+          </Link>
+        )
+      }
+      return (
+        <a
+          href={href}
+          onClick={onClick}
+          target={target}
+          rel={rel}
+          className={cn(baseClasses[variant], disabled && 'opacity-60 pointer-events-none', className)}
+        >
+          {children}
+        </a>
+      )
+    }
+    
     return (
-      <Tag
-        href={href}
-        type={href ? undefined : type}
+      <button
+        type={type}
         onClick={onClick}
         disabled={disabled}
         className={cn(baseClasses[variant], disabled && 'opacity-60 pointer-events-none', className)}
       >
         {children}
-      </Tag>
+      </button>
     )
   }
 
-  const Comp = href ? motion.a : motion.button
+  if (href) {
+    const isInternal = href.startsWith('/')
+    const MotionLink = motion.create(Link)
+    
+    if (isInternal) {
+      return (
+        <MotionLink
+          ref={ref as any}
+          href={href}
+          onClick={onClick}
+          className={primaryClasses}
+          style={{ x: translateX, y: translateY }}
+          onMouseMove={handleMouse}
+          onMouseLeave={handleLeave}
+          whileTap={{ scale: 0.95 }}
+        >
+          {content}
+        </MotionLink>
+      )
+    }
+    
+    return (
+      <motion.a
+        ref={ref as any}
+        href={href}
+        onClick={onClick}
+        target={target}
+        rel={rel}
+        className={primaryClasses}
+        style={{ x: translateX, y: translateY }}
+        onMouseMove={handleMouse}
+        onMouseLeave={handleLeave}
+        whileTap={{ scale: 0.95 }}
+      >
+        {content}
+      </motion.a>
+    )
+  }
 
   return (
-    <Comp
-      ref={ref as React.Ref<HTMLButtonElement & HTMLAnchorElement>}
-      href={href}
-      type={href ? undefined : type}
+    <motion.button
+      ref={ref as any}
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={primaryClasses}
@@ -103,6 +168,6 @@ export function PrimaryButton({
       whileTap={{ scale: 0.95 }}
     >
       {content}
-    </Comp>
+    </motion.button>
   )
 }

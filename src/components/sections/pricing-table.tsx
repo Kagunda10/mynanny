@@ -21,24 +21,26 @@ export function PricingTable({
       <SectionEntrance>
         <div className="double-bezel">
           <div className="double-bezel-inner !p-0 overflow-hidden">
-            <table className="w-full text-left">
-              <thead className="bg-surface-container-high border-b border-outline-variant/30">
-                <tr>
-                  <th className="p-6 font-bold text-[14px]">Service Type</th>
-                  <th className="p-6 font-bold text-[14px]">Booking Fee</th>
-                  <th className="p-6 font-bold text-[14px]">Daily/Monthly Rate</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-outline-variant/30">
-                {rows.map((row) => (
-                  <tr key={row.service} className="hover:bg-surface-container-low transition-colors">
-                    <td className="p-6">{row.service}</td>
-                    <td className="p-6 text-primary font-semibold">{row.bookingFee}</td>
-                    <td className="p-6">{row.rate}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left min-w-[600px]">
+                <thead className="bg-surface-container-high border-b border-outline-variant/30">
+                  <tr>
+                    <th className="p-6 font-bold text-[14px]">Service Type</th>
+                    <th className="p-6 font-bold text-[14px]">Booking Fee</th>
+                    <th className="p-6 font-bold text-[14px]">Daily/Monthly Rate</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-outline-variant/30">
+                  {rows.map((row) => (
+                    <tr key={row.service} className="hover:bg-surface-container-low transition-colors">
+                      <td className="p-6">{row.service}</td>
+                      <td className="p-6 text-primary font-semibold">{row.bookingFee}</td>
+                      <td className="p-6">{row.rate}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <p className="text-[12px] text-center mt-6 text-on-surface-variant">

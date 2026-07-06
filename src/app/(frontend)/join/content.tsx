@@ -8,13 +8,14 @@ import { FAQ } from '@/components/sections/faq'
 import { CountUp } from '@/components/motion/count-up'
 import { EarningsCalculator } from '@/components/sections/earnings-calculator'
 import { SOSPhoneDemo } from '@/components/sections/sos-phone-demo'
+import Image from 'next/image'
 
 /* ── Data ────────────────────────────────────────────────────── */
 
 const WORKER_AVATARS = [
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCc1r5sE8_yCXSO5Q_z3fKB6pf3xaI3WDjUagPWFdCLxefYr5UyDHPUHrq1T8JlLiyfFNrFcVW1fywPnU32YHdmcOSmC2tMvd2cR20OXHlSIbR9RP4nMOzzQF2cQHFH0TQHQG8i5DYTW6I4w0kgfP8lW7oXBx2agfqxKrx5LN3xpuEz9qALPTNiRXAHHj5PCluxiJa4dFH_SbHjJxCQKcJO5D73pLt5YWc5WqVnx98D2OOQqh7bCNHg',
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDL8M2IyU48HE8LkOB0Iu1Puf9BoWBxlOoJuAGdC2EVy-mGI3j-mP8tfQxAUhEaEyXf1dlzOm2CKlPTxfFAUyEbEUP8wFpAqP5Kkd8xF7Hn19GccGXyJ19CXcRd_dHxGqkCdCPAHzSqA6AwRblOFPq3qS4R3nCVlrLQVcCQKDFgxQTDSMTRd9qCxRjT8iYUWZO1y2DKPo6YTHsMD7qKlLkGrn_Jql9DJPglbJlIEjYDZvmFnl8lO0lA',
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8S7H1OZY8a8-ZuJkWFEUvmn4XMUzfNJWwmQAqz3ybPzTwlBFjwP8xfHMdOxnfEHx5RFBawYT95KxQ0OP3Iv5LYZfwq-nsnv5eHxVQKuQ4m_jvdrTbcfKIlnQnDTBwU_cuwlrSU16Jjk2RqWiLxmNQvdJc0O2x-Ap93UJLqFGm5VTnQT8yd3j4OUgWPQmVHl9G0dkeFE76fHCqfGbQvFkGHaBulv4IkSAHvZzFN85Gj-lqXQC3Ecg',
+  '/images/workers/mary.jpg',
+  '/images/workers/faith.jpg',
+  '/images/workers/joyce.jpg',
 ]
 
 const ZIGZAG_SECTIONS = [
@@ -23,8 +24,7 @@ const ZIGZAG_SECTIONS = [
     title: 'Your safety is non-negotiable',
     description:
       'We vet families as strictly as we vet workers. Every home you enter is registered, and your location is tracked in real-time during shifts.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD5EvlBYvmEp0GWn1-bKl-UPqODgFwFwJK2JD7t3KQxRBgZMmePXW3OD3VB7nOWKKtOtlM-4QLuaS7q3kQtcCKCOhz-W1MoFWE5JMjlhm0T2vFZ01wbJEbXfI7Q05IM45cNFuZHfZfwkrS4Y9i2rUhIl7tLIEBkKEBCxS5UWMhXTlbK5AMa_4J-z2Pr6lz3F2cBhFEp51HLX8UBZLV1MYN_3HB3rrH8cKFJVHlXP75nN3aR1bvCXPlA',
+    image: '/images/join/safety.jpg',
     features: [
       { icon: 'sos', label: 'One-tap SOS alert' },
       { icon: 'health_and_safety', label: 'Worker insurance coverage' },
@@ -37,8 +37,7 @@ const ZIGZAG_SECTIONS = [
     title: 'Transparent pay. Every shilling accounted for.',
     description:
       'No more chasing clients for payment. MyNanny holds funds in escrow and releases them instantly to your M-Pesa once the job is complete.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAfO50kj5j_Hfaap12QEwifqNP_PnCxR5HEL3REdNRj6OwCVcnBKAQk84c1o7rw5HkxYDXTGG6p5aOzfmj_RrXkR8YCqF3_1u5M5X-KlbEXBUm2kQGKx2BvLb5G1lPyI_i_tJTBj6c9qhTYzUKMaAlR3CsaO2iIVnQfcO9Y0aCYhEOANHdBSjIkBqXPGXjMPm8IYmhkKNh_J5RkkG4wjj-1iq-3YWxzSIe8UgZ7zI17nFPQcFaxUWuA',
+    image: '/images/join/payment.jpg',
     features: [
       { icon: 'payments', label: 'M-Pesa payouts every Friday' },
       { icon: 'schedule', label: 'Payout in under 2 hours' },
@@ -51,8 +50,7 @@ const ZIGZAG_SECTIONS = [
     title: 'You are a professional. We treat you like one.',
     description:
       'We provide free training and professional uniforms to our top performers. You are not just a worker; you are a MyNanny Professional.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAJGI-LXFq0-aqO5fZ8eTgVNq2V-1YXYoI0ZtunPmopBF8uV_MmzqLv90t-2kU-Cx_Q2-UDrKm8ZXMHd_qXZ_EFwNnQaSE0ZLfvzKOGANHCAM4zDibrCeSxjVVEI4Ng30DL3z-0jOYT4q5ZDqRdCNM2DYCl0Q1YYuqORz7X-dLCuIHqE3eXqbQtV7FVX4JLlQ85vqbG29nIlHR9ZqYB7j8GBwBqmajTmBaH1QYcBGbhFcpzx3GfqV4MA',
+    image: '/images/join/training.jpg',
     features: [
       { icon: 'school', label: 'Free skills training' },
       { icon: 'badge', label: 'Professional certifications' },
@@ -93,16 +91,22 @@ const ONBOARDING_STEPS = [
 const TESTIMONIALS = [
   {
     name: 'Faith K.',
+    initials: 'FK',
+    color: 'bg-primary-fixed text-primary',
     quote:
       'I used to wait weeks for my salary. Now with MyNanny, I get my pay every Friday directly to M-Pesa. It has changed my life.',
   },
   {
     name: 'Sarah O.',
+    initials: 'SO',
+    color: 'bg-secondary-fixed text-secondary',
     quote:
       'The safety features give me peace of mind. I know that someone is looking out for me while I am at work.',
   },
   {
     name: 'Joyce M.',
+    initials: 'JM',
+    color: 'bg-tertiary-fixed text-tertiary',
     quote:
       'Best domestic app in Nairobi. The families are respectful and the support team actually listens to workers.',
   },
@@ -155,21 +159,22 @@ export function JoinContent() {
               Earn more. Grow your skills. Be valued.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <PrimaryButton href="#apply">Start your application</PrimaryButton>
-              <PrimaryButton variant="secondary" href="#process">
-                See how it works
-              </PrimaryButton>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <PrimaryButton href="https://forms.gle/your-google-form-url" target="_blank" rel="noopener noreferrer">Start your application</PrimaryButton>
+                <PrimaryButton variant="secondary" href="#process">
+                  See how it works
+                </PrimaryButton>
+              </div>
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
                 {WORKER_AVATARS.map((src, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high bg-cover bg-center"
-                    style={{ backgroundImage: `url('${src}')` }}
-                  />
+                    className="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high relative overflow-hidden"
+                  >
+                    <Image src={src} alt={`Worker avatar ${i + 1}`} fill className="object-cover" sizes="40px" />
+                  </div>
                 ))}
               </div>
               <p className="text-sm text-on-surface-variant">
@@ -191,11 +196,13 @@ export function JoinContent() {
             <div className="double-bezel">
               <div className="double-bezel-inner flex flex-col items-center">
                 <div className="relative mb-4">
-                  <div className="w-28 h-28 rounded-full overflow-hidden bg-surface-container-high">
-                    <img
-                      className="w-full h-full object-cover"
+                  <div className="w-28 h-28 rounded-full overflow-hidden bg-surface-container-high relative">
+                    <Image
+                      className="object-cover"
                       src={WORKER_AVATARS[0]}
                       alt="Mary Wanjiku profile"
+                      fill
+                      sizes="112px"
                     />
                   </div>
                   <div className="absolute bottom-0 right-0 bg-verified-green text-white p-1 rounded-full border-4 border-white">
@@ -302,11 +309,13 @@ export function JoinContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Image */}
               <div className={s.imageFirst ? 'order-2 md:order-1' : 'order-2'}>
-                <div className="w-full aspect-square bg-surface-container-high rounded-[40px] overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover"
+                <div className="w-full aspect-square bg-surface-container-high rounded-[40px] overflow-hidden relative">
+                  <Image
+                    className="object-cover"
                     src={s.image}
                     alt={s.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
@@ -384,7 +393,9 @@ export function JoinContent() {
                 <div className="double-bezel h-full">
                   <div className="double-bezel-inner h-full flex flex-col">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-surface-container-high" />
+                      <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center font-bold text-lg`}>
+                        {t.initials}
+                      </div>
                       <div>
                         <p className="font-bold">{t.name}</p>
                         <div className="flex text-star-amber">
@@ -433,6 +444,9 @@ export function JoinContent() {
               </p>
               <div className="flex justify-center">
                 <PrimaryButton
+                  href="https://forms.gle/your-google-form-url"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white !text-brand-pink"
                   icon="arrow_forward"
                 >
