@@ -22,7 +22,7 @@ export const CONTACT_INTENTS: ContactIntent[] = [
     bestChannel: 'whatsapp',
     responseTime: 'Usually within 4 hours on weekdays',
     actionLabel: 'WhatsApp our matching team',
-    actionHref: `https://wa.me/${COMPANY.whatsapp}?text=Hi%20MyNanny%2C%20I%20need%20help%20hiring%20in%20`,
+    actionHref: `https://wa.me/${COMPANY.whatsapp}?text=Hi%20Mynanny%2C%20I%20need%20help%20hiring%20in%20`,
     includeWhenContacting: [
       'Neighbourhood (e.g. Kilimani, Karen, Lavington)',
       'Role needed and live-in vs dayburg',
@@ -154,7 +154,7 @@ export const DISPUTE_STEPS = [
     step: '3',
     title: 'Team decision',
     description:
-      'A MyNanny team member reviews your case and responds with a final decision. Refund rules depend on who cancelled and when.',
+      'A Mynanny team member reviews your case and responds with a final decision. Refund rules depend on who cancelled and when.',
   },
 ] as const
 

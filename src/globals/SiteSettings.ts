@@ -4,7 +4,7 @@ export const SiteSettings: GlobalConfig = {
   slug: 'site-settings',
   label: 'Site Settings',
   fields: [
-    { name: 'siteName', type: 'text', defaultValue: 'MyNanny' },
+    { name: 'siteName', type: 'text', defaultValue: 'Mynanny' },
     { name: 'tagline', type: 'text' },
     { name: 'footerBlurb', type: 'textarea' },
     { name: 'phone', type: 'text' },

@@ -58,7 +58,7 @@
 ### Data/Content Differences
 - None.
 
-## Page 3: Why MyNanny
+## Page 3: Why Mynanny
 
 ### Missing Sections
 - None.
@@ -73,7 +73,7 @@
   - Design Counseling icon is `psychology_alt`, built code uses `psychology`.
 
 ### Style Deviations
-- **Comparison Card Hover**: The design includes `transform hover:scale-[1.02] transition-transform duration-500` on the "MyNanny Way" comparison card. The built codebase omits this hover effect.
+- **Comparison Card Hover**: The design includes `transform hover:scale-[1.02] transition-transform duration-500` on the "Mynanny Way" comparison card. The built codebase omits this hover effect.
 - **Vetting Bento Grid Styling**: The design uses a mix of `bg-white/10 backdrop-blur-xl` for large cards and `bg-white/5` with `hover:bg-white/10 transition-colors` for small cards. The built code simplifies this and just uses `bg-white/5` for all (except the primary colored one) without backdrop blur or hover effects.
 
 ### Missing Animations/Interactions
@@ -120,7 +120,7 @@
 
 ### Missing Sections
 - **Hero Profile Preview Card**: The design includes a right-column profile card ("Mary Wanjiku") showcasing earnings, ratings, and verifications. This is missing.
-- **Earnings Comparison Slab**: The design has a section comparing take-home pay (60% Traditional Bureau vs 92% MyNanny). This entire section is missing.
+- **Earnings Comparison Slab**: The design has a section comparing take-home pay (60% Traditional Bureau vs 92% Mynanny). This entire section is missing.
 - **Zig-Zag Values**: The design features a zig-zag layout detailing "Safety", "Fair Pay", and "Respect" with large images. This is completely missing.
 - **Onboarding Process (5 Steps)**: The design has a horizontal 5-step onboarding guide. This is missing.
 - **SOS Feature Pulse**: The design features a large, interactive SOS button pulse demonstration. This is entirely missing.
@@ -188,7 +188,7 @@
 
 ### Copy Differences
 - **Breadcrumbs**: The design uses `Home > Guides > Hiring > What does a nanny cost...`. The built code uses `Guides > Guides > Nanny Costs in Nairobi...`.
-- **Author**: The design uses `Sarah Wanjiku`. The built code uses `MyNanny Editorial`.
+- **Author**: The design uses `Sarah Wanjiku`. The built code uses `Mynanny Editorial`.
 
 ### Style Deviations
 - **Sidebar CTA**: The design uses `bg-inverse-surface` (dark background) with a blurred primary highlight effect. The built code uses `double-bezel` with `bg-brand-pink/5` (light pink background).

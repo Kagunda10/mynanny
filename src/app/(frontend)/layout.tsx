@@ -33,8 +33,8 @@ const clashDisplay = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'MyNanny - Vetted Nannies & Cleaners in Kenya',
-    template: '%s | MyNanny',
+    default: 'Mynanny - Vetted Nannies & Cleaners in Kenya',
+    template: '%s | Mynanny',
   },
   description:
     'Find trusted domestic help in Nairobi. Rigorous vetting, instant booking, and professional management for nannies, cleaners, and elderly care.',
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_KE',
-    siteName: 'MyNanny',
+    siteName: 'Mynanny',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'MyNanny - Vetted Domestic Help in Nairobi',
+        alt: 'Mynanny - Vetted Domestic Help in Nairobi',
       },
     ],
   },

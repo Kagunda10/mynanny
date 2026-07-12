@@ -28,7 +28,7 @@ export function BrandLogo({
   return (
     <Image
       src={LOGO_SRC[variant]}
-      alt="MyNanny"
+      alt="Mynanny"
       width={variant.startsWith('horizontal') ? 136 : 40}
       height={variant.startsWith('horizontal') ? 40 : variant.startsWith('stacked') ? 120 : 40}
       priority={priority}

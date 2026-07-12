@@ -1,6 +1,6 @@
-# MyNanny VPS Deployment Guide
+# Mynanny VPS Deployment Guide
 
-Deploy the MyNanny website on an Ubuntu VPS with PostgreSQL, PM2, Nginx, and SSL.
+Deploy the Mynanny website on an Ubuntu VPS with PostgreSQL, PM2, Nginx, and SSL.
 
 ## Prerequisites
 

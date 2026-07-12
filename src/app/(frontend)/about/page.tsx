@@ -3,8 +3,8 @@ import { AboutContent } from './content'
 import { getAboutContent, getTeamMembers, getTimeline } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'About Us | MyNanny',
-  description: 'Learn about MyNanny — Kenya\'s trusted platform for vetted domestic help since 2024.',
+  title: 'About Us | Mynanny',
+  description: 'Learn about Mynanny — Kenya\'s trusted platform for vetted domestic help since 2024.',
 }
 
 export default async function AboutPage() {

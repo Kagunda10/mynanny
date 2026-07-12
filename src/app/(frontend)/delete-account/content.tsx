@@ -11,7 +11,7 @@ export function DeleteAccountContent() {
     <LegalPageLayout
       eyebrow="Account"
       title="Delete App Account"
-      description="How to permanently remove your MyNanny account and data from our servers."
+      description="How to permanently remove your Mynanny account and data from our servers."
       updated="July 2026"
     >
       <div className="space-y-6">
@@ -56,7 +56,7 @@ export function DeleteAccountContent() {
         <SectionEntrance delay={0.4}>
           <div className="text-center pt-6">
             <PrimaryButton href={COMPANY.appUrl} icon="open_in_new">
-              Open MyNanny App
+              Open Mynanny App
             </PrimaryButton>
           </div>
         </SectionEntrance>

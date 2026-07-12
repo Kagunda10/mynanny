@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { WhyMyNannyContent } from './content'
+import { WhyMynannyContent } from './content'
 import {
   getCoverageContent,
   getFaqByPage,
@@ -9,12 +9,12 @@ import {
 } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Why MyNanny | Premium Childcare Excellence',
+  title: 'Why Mynanny | Premium Childcare Excellence',
   description:
-    'Discover why Nairobi families choose MyNanny — rigorous 5-step vetting, transparent pricing, continuous support, and the highest retention rate in Kenya.',
+    'Discover why Nairobi families choose Mynanny — rigorous 5-step vetting, transparent pricing, continuous support, and the highest retention rate in Kenya.',
 }
 
-export default async function WhyMyNannyPage() {
+export default async function WhyMynannyPage() {
   const [coverage, testimonials, faqItems, homepage, marketing] = await Promise.all([
     getCoverageContent(),
     getTestimonials(),
@@ -24,7 +24,7 @@ export default async function WhyMyNannyPage() {
   ])
 
   return (
-    <WhyMyNannyContent
+    <WhyMynannyContent
       coverage={coverage}
       testimonials={testimonials}
       faqItems={faqItems}

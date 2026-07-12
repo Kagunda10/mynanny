@@ -3,9 +3,9 @@ import { LegalPageLayout, LegalProse } from '@/components/legal/legal-page-layou
 import { getLegalContent } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions | MyNanny',
+  title: 'Terms and Conditions | Mynanny',
   description:
-    'Terms and conditions for using the MyNanny website and app. Matching service for domestic workers and employers in Kenya.',
+    'Terms and conditions for using the Mynanny website and app. Matching service for domestic workers and employers in Kenya.',
 }
 
 export default async function TermsPage() {

@@ -341,7 +341,7 @@ export async function getArticleBySlug(slug: string) {
       excerpt: article.excerpt ?? '',
       category: article.category ?? 'Guides',
       readTime: article.readTime ?? '5 min read',
-      author: article.author ?? 'MyNanny Team',
+      author: article.author ?? 'Mynanny Team',
       body: article.body ?? '',
       image:
         typeof article.featuredImage === 'object' && article.featuredImage?.url
@@ -487,8 +487,8 @@ export async function getTimeline(): Promise<TimelineItem[]> {
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   const defaultTeam: TeamMember[] = [
-    { name: 'Alexander', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2024.' },
-    { name: 'James', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2024.' },
+    { name: 'Alexander', role: 'Co-Founder', bio: 'Co-founded Mynanny in 2024.' },
+    { name: 'James', role: 'Co-Founder', bio: 'Co-founded Mynanny in 2024.' },
   ]
 
   return safeFetch<TeamMember[]>(async () => {

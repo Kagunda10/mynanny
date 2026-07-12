@@ -26,7 +26,7 @@ const articles = [
     readTime: '8 min read',
     featured: true,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAr17RIgft-IyaMcgnJExnJnulLVG78biOB2JKtGGr1Gt71DoK6Say3Ri6id9WuhvMHYZBIzeR4jQqnkueIpNFI-aYBnjYZyaWDIn-16tbGoMe1sqrAuscKPxVQxLSxEjFugtBkQSPpz0PV4-Y36e4trtaw__fFvD4DX4ITKaSqSLH0LzEc3uspXk6J3ZDzQ53wyAF744iuM8tE2jXhmD9KmXUs0N3yAAifUmDfp-Vmhqj01S6wovFM_w',
+      '/images/remote/369ebfa92e19.jpg',
     author: 'Wanjiku Maina',
     authorRole: 'Lead Welfare Specialist',
     authorAvatar: '',
@@ -40,11 +40,11 @@ const articles = [
     readTime: '5 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCuypH1AhSh-xNcU90Xigk6dLQatseSOP2Gu18ghGGG1gsYx_C29rF7dJY8flsiPnrA2_nY2FZcxv6HDizOtg0AXQtKQG0w2XpycKGwXKYgNBGxJ0aa5ESqwW9yG1Xm1UgR9BNGNaUI6uLJuwfoGXz8pD0fgCA0hZQykg02ECfKjcJibR-Y4QSatbdkjbQq-JIP3enFiUeMrEKbvREBOfW6vLIY109jk3xnRJruLKKmQzCdLVxkxE-qZg',
+      '/images/remote/5b2b6fd417a2.jpg',
     author: 'David Kibe',
     authorRole: 'Hiring Specialist',
     authorAvatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDVWW4gl7XER7HhZrgYL24Uk4_JyH74xqaZYNpjbuQVrdHKvV5i3ENUm6UPp3I27fMCIleYMvfoLwRI4hSdSy4FwSuSDDkE6eyPNxWP4jxN__NOO9LbpmwRfAQa3YvyUsZGPcCTkSAhyPO9dmE7Ix4JuecFSIeUnUpKN4KCX5GBYgCSLUsLnW89T_Xsr4fiAAmkymmsugrZXvj_COUn2pr_LUji8PMN2UCCNbT2Svw-0_Z23JeUOmdeNA',
+      '/images/remote/e40a916b4386.jpg',
   },
   {
     slug: 'nanny-interview-questions',
@@ -55,7 +55,7 @@ const articles = [
     readTime: '12 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBGUshKwWIL37JJzcGZaL1NukMfU35A4GzYj2sXKzB2lGDoD34RuivGuL5fPC3N8KrlxHYyFWSBDUgFBADkwWomxBLL1w2xpmU171hW5FPs6ETjze_TPZRo0k-fkZW6v6G5nmn9YoDwxGXh9sOuDlosLklOktBZOkQx7uJZlCMYEP8LQgZpQG_4AyDvtOLyrzAdbAAfDWtr9vMzB9vFIMcJZ12vlUljktuoZaQtrfa_lzP-WwPJYSMivQ',
+      '/images/remote/06c3b11c01fb.jpg',
     author: 'Edna Kwamboka',
     authorRole: 'Vetting Expert',
     authorAvatar: '',
@@ -69,11 +69,11 @@ const articles = [
     readTime: '6 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBun7tBfFKoEgRAO4HCcfpjOa8YCgXDn7b-x9o7pej5U50ek0WpTvpTimdDgCMojR7SGnDHMjPbUxn0lyyjeEy2X_LPAx5_vW57O5-9UbziPD9hQPF55jLS0EcHIEz99ufTIlFUil3duCdj_MhQi2IXEm39zPzPo3WH8hq5h5VVJOtC4hHR2qEjsi4zyptZ0lHBWSqCor9GjzFI7S94uF8F5O41sKNHAuOXnmg61eeOlkWA26ZUQ1vmCg',
+      '/images/remote/005a275c735f.jpg',
     author: 'Sarah Githinji',
     authorRole: 'Home Care Advisor',
     authorAvatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBqfmRTe_K_O72sGiqwL52RC4CzB9or5z210mN_hk3A3WTb3qvD47bCZSZ41saWVVXMM6kZJIWklbY-RW8BMqYearPnb06In4anyltGsiBmLXNK0o4pN2ES4V_N14uLdfcfiqhk4P74Tp5fK7GLjq5ANaYjM8rW8tg97aENYEQg7ntljQwayX1vpUM4fcBnewaykGcYo3mT7YZj0_Or8L_RR4nT8QU2soAfn82sIC7FHMYNAz6Jwqr50Q',
+      '/images/remote/57c69cf7741f.jpg',
   },
   {
     slug: 'domestic-worker-contract-template',
@@ -84,9 +84,9 @@ const articles = [
     readTime: '10 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBe0O2tTe4JM9GVqI6h9SlAcb_RIyjiu0CXpEGzz-hPO7laWWTtOReUFmQ_GPudQERwwGf2gJYdkxd-XlsbzA6asW-F0283yPEqmrgtRjvMgzoj_hR3AEMViEEVbrdTyfZHuZMSHgkFQh4l3JA5WQ-SMJTimILjcpPvcQYaiuB7BaSM5Y8yobQUOWnerrBqgMT2S0NlgsTKsPL6ueN-s-tEdaSHqlgD_-NauBYw6o95PxQLFkskfiT9RA',
+      '/images/remote/0f24f50dec42.jpg',
     author: 'Legal Team',
-    authorRole: 'MyNanny Legal',
+    authorRole: 'Mynanny Legal',
     authorAvatar: '',
   },
   {
@@ -98,11 +98,11 @@ const articles = [
     readTime: '7 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBMDQZsPKZ7y7FXLC3wIiZkw6liF_PTRIrxdH5MYQv5AFgtBJNH-_p8KEOC8fadlMkBtnGmtGJWzIMV0_FGiIJ3Y4wAgyRhopfiNMh1xlBme4mF_TgecM-2d-UrGcN2P5mNujTxgd6bE3quBf-KUiTlU4bv2qRoHH2Zdvjghbnxb5MxsbnT0Hv21AKHMhngKQ6Qn0WNKg6iTCPKtI98lq14gtU0Q3nydRYCxf8KkKFTlTu8DZbeWXNOzQ',
+      '/images/remote/c56cb8c1b705.jpg',
     author: 'Grace Njeri',
     authorRole: 'Childcare Specialist',
     authorAvatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBI2spWOIC8OmmFEPTh-G8SHlpITo31oq_cCCxcLY0VD4Boo7p6B-GkxPlPXSh2rc_3NJ02SrKaCnNhunxakyNv9dwNFWeqh7_n8sH0G6pLDiE50gOqfDy2-WSZLYfG4if6loTH9JEX5KkSzo9_OvP3k47bPqkT4GsKg9zBTu3Phy9NWf7wLGcrTuJQ-7PgggPsxmyzjgD-QeJnO4EOTPd2Z1ssYJ_zCb9snQG4VRPxtKU57g30B9-yAQ',
+      '/images/remote/2a1a67574d33.jpg',
   },
   {
     slug: 'first-aid-for-nannies',
@@ -113,7 +113,7 @@ const articles = [
     readTime: '15 min read',
     featured: false,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAjs2faSEPo6Ok7bTh4z4yvEz6yewRfUVhTyvhF7Nm9kv2uCDOJ0B4xpkEbXh5n0J-Ueykd8T1MS2fQxl8jN4pbHyih8Tl79WPzszjy7ecTbRA_VfubxFnOWlXgy_e9ClhtXuqHbsZICAB92J_dxtp6l6WjL_hCZKJjwBhfTGIl4SsTV18vNDNWx_b0P2z0h8oOwXQI_GBKCW7-YlxCJECgpCcUWdPxz_tU-BzkL5_hsGyWB5jZWGfa9w',
+      '/images/remote/0360a470b576.jpg',
     author: 'Dr. Robert Omondi',
     authorRole: 'Health & Safety',
     authorAvatar: '',
@@ -131,7 +131,7 @@ function mapCmsArticles(cmsArticles: ArticlePreview[]): GuideArticle[] {
     readTime: a.readTime,
     featured: a.featured ?? false,
     image: a.image ?? '',
-    author: a.author ?? 'MyNanny Team',
+    author: a.author ?? 'Mynanny Team',
     authorRole: 'Editorial',
     authorAvatar: '',
   }))

@@ -36,7 +36,7 @@ const ZIGZAG_SECTIONS = [
     tag: 'Priority 02',
     title: 'Transparent pay. Every shilling accounted for.',
     description:
-      'No more chasing clients for payment. MyNanny holds funds in escrow and releases them instantly to your M-Pesa once the job is complete.',
+      'No more chasing clients for payment. Mynanny holds funds in escrow and releases them instantly to your M-Pesa once the job is complete.',
     image: '/images/join/payment.jpg',
     features: [
       { icon: 'payments', label: 'M-Pesa payouts every Friday' },
@@ -49,7 +49,7 @@ const ZIGZAG_SECTIONS = [
     tag: 'Priority 03',
     title: 'You are a professional. We treat you like one.',
     description:
-      'We provide free training and professional uniforms to our top performers. You are not just a worker; you are a MyNanny Professional.',
+      'We provide free training and professional uniforms to our top performers. You are not just a worker; you are a Mynanny Professional.',
     image: '/images/join/training.jpg',
     features: [
       { icon: 'school', label: 'Free skills training' },
@@ -94,7 +94,7 @@ const TESTIMONIALS = [
     initials: 'FK',
     color: 'bg-primary-fixed text-primary',
     quote:
-      'I used to wait weeks for my salary. Now with MyNanny, I get my pay every Friday directly to M-Pesa. It has changed my life.',
+      'I used to wait weeks for my salary. Now with Mynanny, I get my pay every Friday directly to M-Pesa. It has changed my life.',
   },
   {
     name: 'Sarah O.',
@@ -116,7 +116,7 @@ const FAQ_ITEMS = [
   {
     question: 'How do I get paid?',
     answer:
-      'You get paid every Friday directly to your M-Pesa. MyNanny holds funds in escrow and releases them once jobs are confirmed complete. There are no hidden deductions.',
+      'You get paid every Friday directly to your M-Pesa. Mynanny holds funds in escrow and releases them once jobs are confirmed complete. There are no hidden deductions.',
   },
   {
     question: 'What training is provided?',
@@ -131,7 +131,7 @@ const FAQ_ITEMS = [
   {
     question: 'What if there is an emergency?',
     answer:
-      'Every worker has access to a one-tap SOS button in the MyNanny app. When activated, our 24/7 rapid response team in Nairobi is alerted along with your emergency contacts. We also provide worker insurance coverage.',
+      'Every worker has access to a one-tap SOS button in the Mynanny app. When activated, our 24/7 rapid response team in Nairobi is alerted along with your emergency contacts. We also provide worker insurance coverage.',
   },
 ]
 
@@ -266,7 +266,7 @@ export function JoinContent() {
                   <div className="w-12 h-12 bg-brand-pink/20 rounded-xl flex items-center justify-center">
                     <span className="material-symbols-outlined text-brand-pink">payments</span>
                   </div>
-                  <p className="text-sm font-medium">Payments processed daily via M-Pesa</p>
+                  <p className="text-sm font-medium">Payments processed via M-Pesa and on your terms</p>
                 </div>
               </div>
 
@@ -282,10 +282,10 @@ export function JoinContent() {
                   <p className="text-sm text-error">Take-home Pay</p>
                   <p className="text-xs mt-4 text-white/30">Bureau cuts &amp; fees</p>
                 </div>
-                {/* MyNanny */}
+                {/* Mynanny */}
                 <div className="bg-primary-container rounded-[18px] p-6 border border-brand-pink">
                   <p className="text-[10px] text-white/60 uppercase tracking-widest mb-2">
-                    MyNanny App
+                    Mynanny App
                   </p>
                   <p className="text-[36px] md:text-[44px] font-bold mb-1">
                     <CountUp target={92} suffix="%" className="text-verified-green" />
@@ -426,7 +426,7 @@ export function JoinContent() {
       <FAQ
         items={FAQ_ITEMS}
         title="Frequently Asked Questions"
-        description="Common questions from workers joining MyNanny."
+        description="Common questions from workers joining Mynanny."
       />
 
       {/* ── 8. CTA Slab ──────────────────────────────────────── */}

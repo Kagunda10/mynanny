@@ -6,7 +6,7 @@ import { COMPANY } from '@/lib/site-content'
 export function WhatsAppFab() {
   return (
     <motion.a
-      href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20MyNanny%2C%20I%20need%20help%20finding%20domestic%20staff`}
+      href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20Mynanny%2C%20I%20need%20help%20finding%20domestic%20staff`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

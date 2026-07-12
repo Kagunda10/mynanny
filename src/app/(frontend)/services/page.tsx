@@ -5,7 +5,7 @@ import { getServices, getTestimonials } from '@/lib/cms'
 export const metadata: Metadata = {
   title: 'Services & Pricing',
   description:
-    "Explore MyNanny's professional home services — nannies, deep cleaning, and elderly care. Use our instant pricing calculator to estimate costs for Nairobi families.",
+    "Explore Mynanny's professional home services — nannies, deep cleaning, and elderly care. Use our instant pricing calculator to estimate costs for Nairobi families.",
 }
 
 export default async function ServicesPage() {

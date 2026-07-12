@@ -38,7 +38,7 @@ export default async function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'MyNanny',
+    name: 'Mynanny',
     description: 'Vetted nannies and cleaners in Kenya',
     url: 'https://mynanny.co.ke',
     logo: 'https://mynanny.co.ke/brand/svg/lockup-horizontal-color.svg',

@@ -248,7 +248,7 @@ export function AboutContent({
                   <p className="text-primary text-[14px] font-semibold mb-4">{member.role}</p>
                   <p className="text-on-surface-variant leading-relaxed">
                     {member.bio ??
-                      `Started MyNanny in ${COMPANY.founded} to connect Kenyan families with vetted domestic professionals.`}
+                      `Started Mynanny in ${COMPANY.founded} to connect Kenyan families with vetted domestic professionals.`}
                   </p>
                 </div>
               </div>

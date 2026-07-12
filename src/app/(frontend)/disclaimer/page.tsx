@@ -3,8 +3,8 @@ import { LegalPageLayout, LegalProse } from '@/components/legal/legal-page-layou
 import { getLegalContent } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | MyNanny',
-  description: 'Disclaimer for information provided on the MyNanny website.',
+  title: 'Disclaimer | Mynanny',
+  description: 'Disclaimer for information provided on the Mynanny website.',
 }
 
 export default async function DisclaimerPage() {

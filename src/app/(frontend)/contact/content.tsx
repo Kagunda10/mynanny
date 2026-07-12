@@ -216,7 +216,7 @@ export function ContactContent({ contact = DEFAULT_CONTACT_PAGE }: ContactConten
 
             <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
               <motion.a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20MyNanny%2C%20I%20need%20help`}
+                href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20Mynanny%2C%20I%20need%20help`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-fit max-w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/20 hover:opacity-95 active:scale-[0.98] transition-all"
@@ -432,9 +432,9 @@ export function ContactContent({ contact = DEFAULT_CONTACT_PAGE }: ContactConten
                   value: COMPANY.supportEmail,
                   href: `mailto:${COMPANY.supportEmail}`,
                 },
-                ...COMPANY.phones.map((phone, index) => ({
+                ...COMPANY.phones.map((phone) => ({
                   icon: 'call' as const,
-                  label: index === 0 ? 'Primary phone' : 'Secondary phone',
+                  label: 'Phone',
                   value: phone,
                   href: `tel:${phone.replace(/\s/g, '')}`,
                 })),
@@ -462,7 +462,7 @@ export function ContactContent({ contact = DEFAULT_CONTACT_PAGE }: ContactConten
               ))}
 
               <a
-                href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20MyNanny%2C%20I%20need%20help`}
+                href={`https://wa.me/${COMPANY.whatsapp}?text=Hi%20Mynanny%2C%20I%20need%20help`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 md:p-5 bg-[#25D366]/10 border border-[#25D366]/20 rounded-[22px] hover:bg-[#25D366]/15 transition-colors"

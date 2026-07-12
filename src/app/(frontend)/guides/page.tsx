@@ -3,7 +3,7 @@ import { GuidesContent } from './content'
 import { getArticles } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Guides & Resources | MyNanny',
+  title: 'Guides & Resources | Mynanny',
   description:
     'Helpful guides for Nairobi homeowners on hiring, managing, and supporting domestic professionals — from NHIF to interview tips.',
 }

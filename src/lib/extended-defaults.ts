@@ -48,15 +48,15 @@ export const DEFAULT_MARKETING: MarketingContent = {
     columns: [
       { label: 'Word of Mouth', note: 'Zero vetting', variant: 'negative' },
       { label: 'Traditional Bureau', note: 'Slow & paper-based', variant: 'negative' },
-      { label: 'MyNanny', note: 'Vetted & Instant', variant: 'highlighted' },
+      { label: 'Mynanny', note: 'Vetted & Instant', variant: 'highlighted' },
     ],
   },
   appCta: {
     title: 'Manage your home from anywhere.',
     description:
-      'Book sessions, chat with your help, and process payments in seconds with the MyNanny App.',
+      'Book sessions, chat with your help, and process payments in seconds with the Mynanny App.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBfMnuARG3BvDHpO12PlXBlKcUwmM4_Fek8pfg1gSnITTBz4CZVdKPPURRanv7JO21VD3ppR8h8zidTjxAXtqxptsJeuBU26l_LQAirUHJUy8V8JH5rofily4xJtsN1eJdDLs7hYt1efNCIHMoNlbCtnzY3DU9lQRqBHgIa2vMB2Nz4wBzLaz9MtFE6Y1Wh0u-P6hAcEQr9CtiwvdIaxr_yi70Xo5OQGfCnV0XBXlTvzNpPrC87-edPJg',
+      '/images/remote/9dd8be1411c5.jpg',
   },
   matchForm: {
     title: "Let's find your perfect match.",
@@ -70,17 +70,17 @@ export const DEFAULT_MARKETING: MarketingContent = {
 export const DEFAULT_ABOUT: AboutContent = {
   heroTitle: 'Our mission is to bring trust back to Nairobi homes.',
   heroImage:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuD3DVn51M8Ksl8kdGuHjojwFVLXdvGyDbE-WNiv64Kt-FjNNAOEpq8T6cxLWZt75okLetaWNyiFcWVcHy-IpwEJBl_f7mg5a232ks9FZOXmQ_-AZ0DdnuK4KHOHee4DKRiU0KulaRNGVQ_cKHjqud9vwa3Ln6IKZId2h57TjEJn8mBpoY_KOtsiUNWK-ayFMi6XWIBc4b82ajPIcg0eHAVq22_XF6f74k-2n3b_SY8M8FxMU3qM2MWOXA',
+    '/images/remote/19f499224ff1.jpg',
   originStory: ABOUT.origin,
   bodyStory: ABOUT.body,
   storyImage:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuD9h25nJsb3beHKOs1kLs-qLxgglKSLkfsOZogyDo0hUHQQrSSqRemldKbkPHk0x1ulnEmH89ttDPRL618xOGA2gfCJHEvpxNy0lhYdyYK_tkuObwlBLZmZ7QbzMi0ZDjclGBsij7nJJjnYHtVAtjKdZoqHKj9TdsDm5G0ZphJU2CEWHbd0zdGsXtKbzLNEmLCaurvBUO7LmvJA0UK4CUMDVRKFklGLaOpfV51X-g6oe26BIqVMTKWgrg',
+    '/images/remote/091e2661e457.jpg',
   mission: ABOUT.mission,
   vision: ABOUT.vision,
   values: ABOUT.whyChoose.map((v) => ({ title: v.title, description: v.description })),
   impactStats: [
-    { value: 5000, suffix: '+', label: 'Families Protected', color: 'primary' },
-    { value: 1200, suffix: '+', label: 'Workers Empowered', color: 'secondary' },
+    { value: 360, suffix: '', label: 'Families Protected', color: 'primary' },
+    { value: 600, suffix: '+', label: 'Workers Empowered', color: 'secondary' },
     { value: 98, suffix: '%', label: 'Retention Rate', color: 'tertiary' },
   ],
   ctaTitle: 'Be part of the story.',
@@ -94,28 +94,21 @@ export const DEFAULT_TIMELINE: TimelineItem[] = [
     title: 'Started Operating',
     description: 'Started operating to connect Kenyan families with vetted domestic professionals.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDwSvv3Wu-XHjaZUsdFNqia8UbhBOguzGV5dOT8DzgOU_42LOWJJF6Qac0JDdba_gX3GGFKTR2KxVhqSRDnSU6ZgTMzpjPYtY0Y27_f4qYZ8sAVxVpuUzWmSGSjIlBTwhl8-me4kxpDGuM71NfRs3iQuqbJkfGPdyVFZ_RJGr8mFU1pey7cHu4_sd8dT9dq2zvRncvruQrOG4gkO2Qa8KlDRbrfeLEmGYwwaTRKZgviCE1OGdhbokk6ow',
+      '/images/remote/40988df5aacc.jpg',
   },
   {
     year: '2025',
     title: '360 Homes',
     description: 'Reached the milestone of serving 360 families across Kenya.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBSAFyNosF8uIrImL1rVClgAWQSIkCe4bxWj8L1ro5n4Yn4VzjnEXzde9Jlrq6eUxQdbSjvIeT4A6l20bWKr2jbeqsW8AtegLgE9jvgF2lIPjwF4H1Za87vV531NS-DpUhRT75UJZs75yK7DPPSOoLortBjYz87qUusb9BaZ99iIh781Xxhe-a1fwiodIjOVWYBzUFQAkllFZzkxJZOrdBNNmAeaRoqo3YOmatN_OYjCTWLJZBRfXJYBQ',
-  },
-  {
-    year: '2025',
-    title: 'Vetting Lab',
-    description: 'Launched our proprietary verification system including AI-backed background checks.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBocsgWPI_gkZ-SFbt7rlHQi6xHelfH3EKECdvApOi0_4ZMe9SN7-qnFg6t-iBl3xzlD0s6LTGRCQtQBZa7WSB1BB91plsz7bFlO2v_ck0CEH6_ZTUiPLPNAaP1QAkJGOxxde4gMUytOF8lbygFDKEs_ZNT17eHE-DQDa0Lj2I_5TUzwhoyRJnUvAm-lCa6EMfdCAJDj6MKpZ2abHyrwzo-ki8w99xMxRU8qi5pyyE7Rnlpj0vb_zb7aQ',
+      '/images/remote/3bff0039a6e0.jpg',
   },
   {
     year: '2026',
     title: 'Empowerment',
-    description: 'Voted as the #1 platform for domestic worker rights and fair compensation in East Africa.',
+    description: 'Highly regarded in Nairobi and its environs for trusted domestic care.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDX_l46SgdE0CNZTRsYQQQ976e86MoY16sK3oDJ-JxxQXCulvegERv9HrU2WAEUqURnHdaYZNkgkGxCA_p44ks1FyBHcci2fFcS5Bvaweg4S6mXcxbbU_Tht6M4-3iMF83mPOP0YZ3LXwJzFJOt-5vvq5GmAVZQbRoBklF8pW6ooS8EtD9Diei_kQLFi1EdGkm4B5ei18Rs9Qjd8mLmz9x6z_7IVVesTKZ-ZFKaeMbQ2VRNgDLq1D4QJw',
+      '/images/remote/402c8f4b4030.jpg',
   },
 ]
 
@@ -134,7 +127,7 @@ export const DEFAULT_CONTACT_PAGE: ContactPageContent = {
 export const DEFAULT_LEGAL: LegalContent = {
   terms: {
     updated: 'July 2026',
-    description: 'Rules for using the MyNanny website and mobile app.',
+    description: 'Rules for using the Mynanny website and mobile app.',
     sections: TERMS_SECTIONS,
   },
   privacy: {

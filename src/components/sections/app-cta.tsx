@@ -55,10 +55,10 @@ export function AppCTA({ content = DEFAULT_MARKETING.appCta }: AppCTAProps) {
           <div className="w-64 h-[500px] bg-white rounded-t-[40px] plum-shadow p-4 translate-y-20 group-hover:translate-y-0 transition-transform duration-700 flex flex-col">
             <div className="flex items-center gap-2 px-2 py-3 shrink-0">
               <BrandLogo variant="app-icon" className="h-8 w-8 rounded-xl" />
-              <span className="text-[13px] font-bold text-on-surface">MyNanny</span>
+              <span className="text-[13px] font-bold text-on-surface">Mynanny</span>
             </div>
             <div className="relative w-full flex-1 rounded-t-[30px] overflow-hidden">
-              <Image className="object-cover" src={content.image} alt="MyNanny app dashboard" fill sizes="256px" />
+              <Image className="object-cover" src={content.image} alt="Mynanny app dashboard" fill sizes="256px" />
             </div>
           </div>
         </div>

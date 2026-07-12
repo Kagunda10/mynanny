@@ -12,7 +12,7 @@ import Image from 'next/image'
 const TRUST_CHIPS = [
   {
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDRXwl4L_-M5RBUNuH30REAfqBK6hfqdQKcSPvQvIlb5IO65w2VDBETwFT-CtoARPpvUmi7AAyJVO_B484KfdS1MXb0obPg-sAM1c42UA2cqilJd6j44Q2Kf66qWxI15QmyYcT-fZ7jqiZhEdmECi-hltQPl2JHHz3U4LC5UYFCb-YcGDJ_9tyoNzeQfa9LYkFdFbSAZSWhMpJiyBOKXj4l_IS6bNq0VHlRt1EqNujLnH_jYy8gmG3bvQ',
+      '/images/remote/709fe5b71764.jpg',
     title: 'Mary W.',
     subtitle: 'Nanny · 5 stars',
     subtitleClass: 'text-primary',
@@ -119,13 +119,6 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
             View Pricing
           </PrimaryButton>
         </div>
-
-        <div className="flex flex-wrap items-center gap-8 opacity-40 grayscale contrast-125">
-          <Image src="/images/logos/business-daily.svg" alt="Business Daily" width={120} height={32} className="h-8 w-auto" />
-          <Image src="/images/logos/techcabal.svg" alt="TechCabal" width={120} height={32} className="h-8 w-auto" />
-          <Image src="/images/logos/nation.svg" alt="Nation" width={120} height={32} className="h-8 w-auto" />
-          <Image src="/images/logos/capital-fm.svg" alt="Capital FM" width={120} height={32} className="h-8 w-auto" />
-        </div>
       </motion.div>
 
       <motion.div
@@ -140,7 +133,7 @@ export function Hero({ content = DEFAULT_HOMEPAGE }: HeroProps) {
               <Image
                 className="object-cover"
                 src={content.heroImage}
-                alt="MyNanny mobile app showing a verified nanny profile"
+                alt="Mynanny mobile app showing a verified nanny profile"
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 priority

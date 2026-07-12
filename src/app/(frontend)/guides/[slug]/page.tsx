@@ -7,7 +7,7 @@ import { PrimaryButton } from '@/components/ui/primary-button'
 import { getArticleBySlug } from '@/lib/cms'
 
 const AUTHOR_AVATAR =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCiMBp0YMjcZaG-8QK5e89qo5WTyY-VNxxdSEtA_Snr4va68C3t78Rq49gciL2lbKqvt2hFbynRa75O9qQN1906rY9ayg6arSi3a6byGwkNhqDu09XMrWDZYCZItnjCP2rlHysY7thEv_Epnfv9hAHsjsbHt2_dylTKqYtYztfIkDgwQb5TJuWC1bUYgkq9Tr82BHNS39ONhLRqhgGIiPcOn9Qv-exCeX0g0uZWp05r4t8Pn4LlInEk8g'
+  '/images/remote/d78bb6fb2912.jpg'
 
 /* ── Article data (hardcoded until CMS is wired up) ─────────── */
 
@@ -33,13 +33,13 @@ const articles: Record<string, Article> = {
     category: 'Hiring Guide',
     categorySlug: 'hiring',
     author: 'Sarah Wanjiku',
-    authorTitle: 'Senior Research Analyst at MyNanny',
+    authorTitle: 'Senior Research Analyst at Mynanny',
     authorBio:
-      'Sarah is the Lead Consultant at MyNanny Kenya. She specializes in family advisory services and has helped over 500 households find the right domestic support. She is a frequent contributor to national conversations on domestic worker rights.',
+      'Sarah is the Lead Consultant at Mynanny Kenya. She specializes in family advisory services and has helped over 500 households find the right domestic support. She is a frequent contributor to national conversations on domestic worker rights.',
     date: 'Jan 15, 2026',
     readTime: '8 min read',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBG5a53KZ_awjHRSxpSDUb88YH510jTgs013SreZ0VMTn8EfVvMWyk02uyvP1MrIHNbSRvIIVRQmpt9IPzZFNK1IpqSAJ_Q8-hMF7LakQPiGDD09D8X1SnPmIyxqrqTD5uiEyZmIW-XLVvjM25vHlqFCgbLITEi9vfFeaYrfQUcGbKT4VXnTJHS8kuy_YDLTxsBMRmrYLcDbTrPkYH9J1vZ2v25KFCFSI9Z5KHT-i45euMnWW6N1XgHKg',
+      '/images/remote/c11e3b145456.jpg',
     toc: [
       { id: 'overview', label: 'Market Benchmarks' },
       { id: 'salary-ranges', label: 'Beyond Basic Salary' },
@@ -170,12 +170,12 @@ const fallbackArticle: Article = {
   category: 'Guides',
   categorySlug: 'guides',
   author: 'Sarah Wanjiku',
-  authorTitle: 'Senior Research Analyst at MyNanny',
+  authorTitle: 'Senior Research Analyst at Mynanny',
   authorBio:
-    'Sarah is the Lead Consultant at MyNanny Kenya. She specializes in family advisory services and has helped over 500 households find the right domestic support.',
+    'Sarah is the Lead Consultant at Mynanny Kenya. She specializes in family advisory services and has helped over 500 households find the right domestic support.',
   date: '2026',
   readTime: '—',
-  image: 'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1200&auto=format',
+  image: '/images/remote/unsplash-guide.jpg',
   toc: [],
   content: (
     <p>
@@ -192,7 +192,7 @@ const relatedArticles = [
     category: 'Hiring',
     readTime: '8 min read',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDPS3TEiDxzMJsTiRy02kwrgxOB4vEsZGd7hyr0qs--zD03PaycKICFRSDcwkHPaIRJHygSppYLmVjCe6Oi_43PUqsyaNT3VmdcaC_L4fSbMzpDgnOZ6GxePjYZ9Mr-cj7dVN31a_ll4AsLI4m7_QgJRsIklnWyBkNLbo9t_HtKVVwyVY7oj04kquVyBzCs5zcjkaGFES55US_Gj2b2ieLi-RS4WN59-s-dgX7CAG_9AfOOx7PyVGlGqw',
+      '/images/remote/cd1df99220d2.jpg',
   },
   {
     slug: 'interview-questions-for-nannies',
@@ -200,7 +200,7 @@ const relatedArticles = [
     category: 'Pricing',
     readTime: '10 min read',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAwUtpsZJBsZ2qfLjuusP0I122z8VBwKUSvtmEqWL_dTM3NrZClQxkclwBNK0PKjFHIc1Ompd0DUF5_Kw8Nl3UrliCOrSo0czVYti8qFFkqOQGVEL4j28oSoMlyDZDZaOOHudFLz4IPQTdl7h0vPc55zcii0-wdMyZUAQadk7lJdn2NBwCAtKmkEHyZZi9cSF_-B7FsnQkrC-61F5XxFFyEd3m1FxPLwqFttfxGCR3SxyowpztI4YLmrQ',
+      '/images/remote/3616350fba01.jpg',
   },
   {
     slug: 'mpesa-payroll-guide',
@@ -208,7 +208,7 @@ const relatedArticles = [
     category: 'Legal',
     readTime: '5 min read',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD4_7844G3n3Eadn3B8yyIWBxXj0ld6qZJXbgctEblzsK3Fblybxt8Q6lBJpag3dyDDWRH9DSfkAn_oTmONUIDrLGTzPzNbaKT0Z41BAB4yDTfC3nns7OlblePzmv075YAKHtppdQD7DecxJL4nLkY75GS1YhoZ5tGwk07khmzfbnb4iyj0ztIaog2-NJVORjVMMqibgGVHJeb_OpuD4eZS3e24hKjVV-Llodiaw2gJkb-JJ9ciUmO06Q',
+      '/images/remote/13d49ff3199f.jpg',
   },
 ]
 
@@ -234,7 +234,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description: article
       ? `Read our guide: ${article.title}`
-      : `Guides and resources from MyNanny.`,
+      : `Guides and resources from Mynanny.`,
   }
 }
 
@@ -251,7 +251,7 @@ export default async function GuidePage({ params }: Props) {
       category: cmsArticle.category,
       categorySlug: cmsArticle.category.toLowerCase().replace(/\s+/g, '-'),
       author: cmsArticle.author,
-      authorTitle: 'MyNanny Editorial',
+      authorTitle: 'Mynanny Editorial',
       authorBio: 'Expert guides for Nairobi families hiring domestic help.',
       date: '2026',
       readTime: cmsArticle.readTime,

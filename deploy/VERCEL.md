@@ -1,4 +1,4 @@
-# Deploy MyNanny to Vercel + Supabase
+# Deploy Mynanny to Vercel + Supabase
 
 Host the Next.js + Payload CMS app on **Vercel** (free) and PostgreSQL on **Supabase** (free).
 

@@ -39,7 +39,7 @@ const MYNANNY_COMPARISON_ITEMS = [
   },
 ] as const
 
-type WhyMyNannyContentProps = {
+type WhyMynannyContentProps = {
   coverage?: CoverageContent
   testimonials?: TestimonialReview[]
   faqItems?: FaqItem[]
@@ -48,14 +48,14 @@ type WhyMyNannyContentProps = {
   marketing?: MarketingContent
 }
 
-export function WhyMyNannyContent({
+export function WhyMynannyContent({
   coverage = DEFAULT_COVERAGE,
   testimonials = DEFAULT_TESTIMONIALS,
   faqItems = DEFAULT_HOW_IT_WORKS_FAQ,
   aggregateRating = 4.8,
   reviewCount = 450,
   marketing = DEFAULT_MARKETING,
-}: WhyMyNannyContentProps) {
+}: WhyMynannyContentProps) {
   return (
     <>
       {/* Hero */}
@@ -65,7 +65,7 @@ export function WhyMyNannyContent({
           <SectionEntrance>
             <EyebrowPill icon="verified" text="Nairobi's Most Trusted Network" />
             <h1 className="mt-6 text-[36px] md:text-[48px] font-semibold leading-[1.08] tracking-tight text-on-surface max-w-3xl mx-auto">
-              Why MyNanny is the gold standard for your family.
+              Why Mynanny is the gold standard for your family.
             </h1>
             <p className="mt-6 text-[18px] text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
               We built the system Nairobi families deserve — rigorous vetting, transparent pricing,
@@ -86,7 +86,7 @@ export function WhyMyNannyContent({
         <SectionEntrance className="overflow-visible">
           <div className="mb-14 text-center md:mb-16">
             <h2 className="text-[34px] font-semibold tracking-tight text-on-surface md:text-[44px]">
-              The MyNanny Difference
+              The Mynanny Difference
             </h2>
             <p className="mt-3 text-[16px] text-on-surface-variant md:text-[18px]">
               How we redefine domestic service recruitment.
@@ -149,7 +149,7 @@ export function WhyMyNannyContent({
                       </span>
                     </span>
                     <p className="font-display text-[17px] font-semibold leading-tight text-primary md:text-[18px]">
-                      The MyNanny Way
+                      The Mynanny Way
                     </p>
                   </div>
                   <ul className="space-y-4">
@@ -266,7 +266,7 @@ export function WhyMyNannyContent({
               Ready to find your perfect match?
             </h2>
             <p className="mt-6 text-[18px] text-white/70 max-w-lg mx-auto leading-relaxed">
-              Join over 1,200 Nairobi families who trust MyNanny with their most precious
+              Join over 1,200 Nairobi families who trust Mynanny with their most precious
               responsibility.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

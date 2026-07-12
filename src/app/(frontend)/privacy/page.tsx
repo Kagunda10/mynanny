@@ -3,9 +3,9 @@ import { LegalPageLayout, LegalProse } from '@/components/legal/legal-page-layou
 import { getLegalContent } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | MyNanny',
+  title: 'Privacy Policy | Mynanny',
   description:
-    'How MyNanny collects, uses, and protects your personal information under the Kenya Data Protection Act.',
+    'How Mynanny collects, uses, and protects your personal information under the Kenya Data Protection Act.',
 }
 
 export default async function PrivacyPage() {
