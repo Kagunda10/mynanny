@@ -228,27 +228,6 @@ export function WhyMynannyContent({
 
       <VideoTestimonial />
 
-      {/* Press / Featured In */}
-      <section className="py-16 border-y border-outline-variant/20">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-6">
-          <SectionEntrance>
-            <p className="text-center text-[12px] font-bold uppercase tracking-widest text-on-surface-variant/50 mb-8">
-              Featured In
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-40 grayscale">
-              {['BusinessDaily', 'Standard', 'Nation', 'Capital FM'].map((outlet) => (
-                <span
-                  key={outlet}
-                  className="text-[20px] md:text-[24px] font-semibold text-on-surface"
-                >
-                  {outlet}
-                </span>
-              ))}
-            </div>
-          </SectionEntrance>
-        </div>
-      </section>
-
       <FAQ
         items={faqItems}
         title="Common questions about how we work"

@@ -10,6 +10,65 @@ type AppCTAProps = {
   content?: MarketingContent['appCta']
 }
 
+function StoreBadges({
+  appStoreUrl,
+  playStoreUrl,
+}: {
+  appStoreUrl?: string
+  playStoreUrl?: string
+}) {
+  const appStoreBadge = (
+    <Image
+      src="/badges/app-store.svg"
+      alt="Download on the App Store"
+      width={120}
+      height={40}
+      className="h-10 w-auto"
+      unoptimized
+    />
+  )
+
+  const playStoreBadge = (
+    <Image
+      src="/badges/google-play.png"
+      alt="Get it on Google Play"
+      width={135}
+      height={52}
+      className="h-[52px] w-auto"
+      unoptimized
+    />
+  )
+
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      {appStoreUrl ? (
+        <a
+          href={appStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex transition-opacity hover:opacity-90"
+        >
+          {appStoreBadge}
+        </a>
+      ) : (
+        <span className="inline-flex opacity-80">{appStoreBadge}</span>
+      )}
+      {playStoreUrl ? (
+        <a
+          href={playStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex -ml-1 transition-opacity hover:opacity-90"
+        >
+          {playStoreBadge}
+        </a>
+      ) : (
+        <span className="inline-flex -ml-1 opacity-80">{playStoreBadge}</span>
+      )}
+    </div>
+  )
+}
+
 export function AppCTA({ content = DEFAULT_MARKETING.appCta }: AppCTAProps) {
   return (
     <section className="floating-slab mb-24">
@@ -18,36 +77,7 @@ export function AppCTA({ content = DEFAULT_MARKETING.appCta }: AppCTAProps) {
           <div>
             <h2 className="text-[36px] md:text-[48px] font-semibold text-white leading-[1.1] mb-6">{content.title}</h2>
             <p className="text-white/80 mb-10 text-[18px]">{content.description}</p>
-            <div className="flex flex-wrap gap-4">
-              {content.appStoreUrl ? (
-                <a
-                  href={content.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit max-w-full items-center gap-3 bg-white text-dark-ink px-8 py-3 rounded-xl font-bold hover:bg-white/90 transition-colors"
-                >
-                  <span className="material-symbols-outlined !text-[24px]">apps</span> App Store
-                </a>
-              ) : (
-                <button className="inline-flex w-fit max-w-full items-center gap-3 bg-white text-dark-ink px-8 py-3 rounded-xl font-bold hover:bg-white/90 transition-colors">
-                  <span className="material-symbols-outlined !text-[24px]">apps</span> App Store
-                </button>
-              )}
-              {content.playStoreUrl ? (
-                <a
-                  href={content.playStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit max-w-full items-center gap-3 bg-white/10 text-white border border-white/20 px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors"
-                >
-                  <span className="material-symbols-outlined !text-[24px]">play_arrow</span> Google Play
-                </a>
-              ) : (
-                <button className="inline-flex w-fit max-w-full items-center gap-3 bg-white/10 text-white border border-white/20 px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors">
-                  <span className="material-symbols-outlined !text-[24px]">play_arrow</span> Google Play
-                </button>
-              )}
-            </div>
+            <StoreBadges appStoreUrl={content.appStoreUrl} playStoreUrl={content.playStoreUrl} />
           </div>
         </SectionEntrance>
 
