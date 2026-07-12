@@ -5,9 +5,8 @@ import { motion, useReducedMotion } from 'motion/react'
 import { SectionEntrance } from '@/components/motion/section-entrance'
 
 const ROLES = [
-  { label: 'Live-in Nanny', baseMin: 18000, baseMax: 35000, growth: 2500 },
-  { label: 'Day Nanny', baseMin: 12000, baseMax: 25000, growth: 2000 },
-  { label: 'Housekeeper', baseMin: 10000, baseMax: 20000, growth: 1500 },
+  { label: 'Live-in Nanny', baseMin: 12000, baseMax: 12000, growth: 2500 },
+  { label: 'Dayburg Nanny', baseMin: 15000, baseMax: 15000, growth: 2000 },
   { label: 'Caregiver', baseMin: 20000, baseMax: 40000, growth: 3000 },
   { label: 'Gardener', baseMin: 8000, baseMax: 15000, growth: 1200 },
 ]

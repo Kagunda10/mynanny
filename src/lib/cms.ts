@@ -116,7 +116,7 @@ export async function getPricingContent(): Promise<PricingContent> {
           ? data.rolePricing.map((r: { role?: string; low?: number; high?: number; period?: string; note?: string; details?: string; popular?: boolean }) => ({
               role: r.role ?? '',
               low: r.low ?? 0,
-              high: r.high ?? 0,
+          high: r.high ?? undefined,
               period: r.period ?? '/month',
               note: r.note ?? '',
               details: r.details ?? '',
@@ -487,8 +487,8 @@ export async function getTimeline(): Promise<TimelineItem[]> {
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   const defaultTeam: TeamMember[] = [
-    { name: 'Alexander', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2019.' },
-    { name: 'James', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2019.' },
+    { name: 'Alexander', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2024.' },
+    { name: 'James', role: 'Co-Founder', bio: 'Co-founded MyNanny in 2024.' },
   ]
 
   return safeFetch<TeamMember[]>(async () => {

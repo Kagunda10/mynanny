@@ -18,14 +18,14 @@ export const CONTACT_INTENTS: ContactIntent[] = [
     icon: 'family_restroom',
     title: 'I want to hire help',
     summary:
-      'Live-in nanny, day nanny, housekeeper, caregiver, or a one-off deep clean. Tell us your neighbourhood and we send curated profiles.',
+      'Live-in nanny, dayburg nanny, caregiver, or a one-off deep clean. Tell us your neighbourhood and we send curated profiles.',
     bestChannel: 'whatsapp',
     responseTime: 'Usually within 4 hours on weekdays',
     actionLabel: 'WhatsApp our matching team',
     actionHref: `https://wa.me/${COMPANY.whatsapp}?text=Hi%20MyNanny%2C%20I%20need%20help%20hiring%20in%20`,
     includeWhenContacting: [
       'Neighbourhood (e.g. Kilimani, Karen, Lavington)',
-      'Role needed and live-in vs day',
+      'Role needed and live-in vs dayburg',
       'Number of children or rooms if relevant',
       'When you want someone to start',
     ],

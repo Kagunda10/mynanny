@@ -89,7 +89,7 @@ export function AboutContent({
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/3 md:sticky md:top-32 h-fit">
             <span className="text-[96px] md:text-[120px] font-bold leading-none text-primary/10 select-none font-display">
-              2019
+              {COMPANY.founded}
             </span>
             <h2 className="text-[32px] font-semibold -mt-12 md:-mt-16 text-primary">The Origin.</h2>
           </div>
@@ -248,7 +248,7 @@ export function AboutContent({
                   <p className="text-primary text-[14px] font-semibold mb-4">{member.role}</p>
                   <p className="text-on-surface-variant leading-relaxed">
                     {member.bio ??
-                      `Co-founded MyNanny in ${COMPANY.founded} to connect Nairobi families with vetted domestic professionals.`}
+                      `Started MyNanny in ${COMPANY.founded} to connect Kenyan families with vetted domestic professionals.`}
                   </p>
                 </div>
               </div>

@@ -39,7 +39,7 @@ export default async function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'MyNanny',
-    description: 'Vetted nannies, housekeepers, and cleaners in Nairobi',
+    description: 'Vetted nannies and cleaners in Kenya',
     url: 'https://mynanny.co.ke',
     logo: 'https://mynanny.co.ke/brand/svg/lockup-horizontal-color.svg',
     image: 'https://mynanny.co.ke/og-image.png',

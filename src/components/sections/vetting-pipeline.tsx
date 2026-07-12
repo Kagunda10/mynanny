@@ -11,7 +11,7 @@ type VettingPipelineProps = {
 
 export function VettingPipeline({ content = DEFAULT_MARKETING.vetting }: VettingPipelineProps) {
   return (
-    <section className="scroll-mt-28 px-5 md:px-6 max-w-[1280px] mx-auto py-12">
+    <section id="vetting" className="scroll-mt-28 px-5 md:px-6 max-w-[1280px] mx-auto py-12">
       <div className="bg-white rounded-[40px] py-16 md:py-12 px-5 md:px-12 overflow-hidden">
         <SectionHeader
           title={content.title}

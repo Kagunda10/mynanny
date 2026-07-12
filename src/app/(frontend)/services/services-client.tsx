@@ -13,9 +13,9 @@ import Image from 'next/image'
 /* ─── data (fallback when CMS unavailable) ─── */
 
 const FALLBACK_CALCULATOR = [
-  { label: 'Full Day Nanny', base: 4500 },
+  { label: 'Full Day Nanny', base: 500 },
   { label: 'Deep Cleaning', base: 6000 },
-  { label: 'Elderly Care', base: 5500 },
+  { label: 'Elderly Care', base: 1200 },
   { label: 'Babysitting', base: 3500 },
 ] as const
 
@@ -92,9 +92,9 @@ const TABS = [
 ] as const
 
 const FALLBACK_PRICING_ROWS = [
-  { service: 'Standard Day Nanny', unit: 'Per Day', rate: 'KES 4,500', notes: 'Includes light housekeeping' },
+  { service: 'Nanny Services', unit: 'Per Day / Per Month', rate: 'KES 500', notes: 'Includes light housekeeping' },
   { service: 'Deep Cleaning 1BR', unit: 'Flat Rate', rate: 'KES 6,000', notes: 'All equipment provided' },
-  { service: 'Elderly Companion', unit: 'Per Shift', rate: 'KES 5,500', notes: '12-hour coverage' },
+  { service: 'Elderly Care', unit: 'Per Day / Per Month', rate: 'KES 1,200', notes: 'Companion and care support' },
   { service: 'Post-Construction', unit: 'Sq Ft', rate: 'KES 150', notes: 'Intensive debris removal' },
 ] as const
 

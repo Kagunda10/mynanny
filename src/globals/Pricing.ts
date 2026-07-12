@@ -21,7 +21,7 @@ export const Pricing: GlobalConfig = {
       fields: [
         { name: 'role', type: 'text', required: true },
         { name: 'low', type: 'number', required: true },
-        { name: 'high', type: 'number', required: true },
+        { name: 'high', type: 'number', admin: { description: 'Optional upper bound. Leave empty to show “From KES …”' } },
         { name: 'period', type: 'text', defaultValue: '/month' },
         { name: 'note', type: 'text' },
         { name: 'details', type: 'textarea' },

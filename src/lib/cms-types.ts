@@ -29,7 +29,7 @@ export type PricingTableRow = {
 export type RolePricing = {
   role: string
   low: number
-  high: number
+  high?: number
   period: string
   note: string
   details: string

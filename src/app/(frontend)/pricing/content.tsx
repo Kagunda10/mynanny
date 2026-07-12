@@ -99,7 +99,9 @@ export function PricingContent({
                     </div>
                     <div className="md:col-span-4 flex items-baseline gap-1">
                       <span className="font-semibold text-[18px] text-on-surface tabular-nums">
-                        KES {item.low.toLocaleString()} - {item.high.toLocaleString()}
+                        {item.high != null
+                          ? `KES ${item.low.toLocaleString()} - ${item.high.toLocaleString()}`
+                          : `From KES ${item.low.toLocaleString()}`}
                       </span>
                       <span className="text-[13px] text-on-surface-variant/50">{item.period}</span>
                     </div>
@@ -199,7 +201,7 @@ export function PricingContent({
           </div>
         </SectionEntrance>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {[
             {
               icon: 'search',
@@ -215,6 +217,11 @@ export function PricingContent({
               icon: 'repeat',
               title: 'Pay worker direct.',
               desc: 'Monthly salary goes straight to the worker. No ongoing platform fee.',
+            },
+            {
+              icon: 'manage_accounts',
+              title: 'We can also manage your worker.',
+              desc: 'Optional ongoing management from KES 5,000 per month — payroll, check-ins, and support handled for you.',
             },
           ].map((step, i) => (
             <SectionEntrance key={step.title} delay={i * 0.08}>

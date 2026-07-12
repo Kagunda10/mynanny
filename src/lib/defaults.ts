@@ -11,7 +11,7 @@ import type {
 import { COMPANY } from '@/lib/site-content'
 
 export const DEFAULT_HOMEPAGE: HomepageContent = {
-  heroEyebrow: 'Most trusted in Nairobi',
+  heroEyebrow: 'Most trusted in Kenya and beyond',
   heroHeadline: 'Find domestic help you can trust.',
   heroSubheadline:
     'Skip the bureaus. We provide vetted, background-checked domestic professionals for Kilimani, Lavington, and the wider Nairobi area.',
@@ -53,14 +53,13 @@ export const DEFAULT_HOMEPAGE: HomepageContent = {
 export const DEFAULT_PRICING: PricingContent = {
   tableRows: [
     { service: 'One-time Deep Clean', bookingFee: 'Ksh 1,200', rate: 'From Ksh 3,500' },
-    { service: 'Part-time Housekeeper', bookingFee: 'Ksh 4,500', rate: 'Ksh 1,500 / day' },
-    { service: 'Full-time Live-in Nanny', bookingFee: 'Ksh 8,000', rate: 'Negotiable (Est. 15k-25k)' },
+    { service: 'Full-time Dayburg Nanny', bookingFee: 'Ksh 6,000', rate: 'Ksh 600 / day' },
+    { service: 'Full-time Live-in Nanny', bookingFee: 'Ksh 6,000', rate: 'From Ksh 12,000' },
   ],
   rolePricing: [
     {
       role: 'Live-in nanny',
-      low: 18000,
-      high: 35000,
+      low: 12000,
       period: '/month',
       note: 'Depends on experience and duties',
       details:
@@ -68,22 +67,12 @@ export const DEFAULT_PRICING: PricingContent = {
       popular: true,
     },
     {
-      role: 'Day nanny',
-      low: 12000,
-      high: 25000,
+      role: 'Dayburg nanny',
+      low: 15000,
       period: '/month',
       note: '6am - 6pm weekday coverage',
       details:
-        'Daytime childcare without accommodation. Standard hours are 6am to 6pm, Monday through Friday. Overtime rates apply for weekends.',
-    },
-    {
-      role: 'Housekeeper',
-      low: 10000,
-      high: 20000,
-      period: '/month',
-      note: 'Cleaning, laundry, cooking',
-      details:
-        'General house management including cleaning, laundry, ironing, and basic cooking. Some families combine this with light childcare for older children.',
+        'Dayburg childcare without accommodation. Standard hours are 6am to 6pm, Monday through Friday. Overtime rates apply for weekends.',
     },
     {
       role: 'Caregiver',
@@ -138,17 +127,17 @@ export const DEFAULT_COVERAGE: CoverageContent = {
       'Tap a neighborhood to see how many vetted workers are active nearby. We match you with people who already know your area.',
   },
   neighborhoods: [
-    { name: 'Kilimani', workers: 186, latitude: -1.2921, longitude: 36.782, popular: ['Nannies', 'Housekeepers'] },
+    { name: 'Kilimani', workers: 186, latitude: -1.2921, longitude: 36.782, popular: ['Nannies', 'Cleaners'] },
     { name: 'Lavington', workers: 142, latitude: -1.28, longitude: 36.767, popular: ['Live-in Nannies', 'Gardeners'] },
-    { name: 'Westlands', workers: 203, latitude: -1.2674, longitude: 36.807, popular: ['Housekeepers', 'Deep cleaning'] },
+    { name: 'Westlands', workers: 203, latitude: -1.2674, longitude: 36.807, popular: ['Cleaners', 'Deep cleaning'] },
     { name: 'Karen', workers: 124, latitude: -1.3197, longitude: 36.707, popular: ['Live-in Nannies', 'Gardeners'] },
     { name: 'Runda', workers: 67, latitude: -1.2145, longitude: 36.806, popular: ['Nannies', 'Caregivers'] },
-    { name: 'Kileleshwa', workers: 158, latitude: -1.283, longitude: 36.778, popular: ['Day Nannies', 'Cleaners'] },
-    { name: 'South B', workers: 94, latitude: -1.313, longitude: 36.845, popular: ['Housekeepers', 'Deep cleaning'] },
-    { name: 'South C', workers: 87, latitude: -1.303, longitude: 36.829, popular: ['Cleaners', 'Housekeepers'] },
-    { name: 'Syokimau', workers: 73, latitude: -1.348, longitude: 36.928, popular: ['Housekeepers', 'Deep cleaning'] },
-    { name: 'Ruaka', workers: 112, latitude: -1.204, longitude: 36.765, popular: ['Nannies', 'Housekeepers'] },
-    { name: 'Parklands', workers: 131, latitude: -1.263, longitude: 36.815, popular: ['Caregivers', 'Housekeepers'] },
+    { name: 'Kileleshwa', workers: 158, latitude: -1.283, longitude: 36.778, popular: ['Dayburg Nannies', 'Cleaners'] },
+    { name: 'South B', workers: 94, latitude: -1.313, longitude: 36.845, popular: ['Cleaners', 'Deep cleaning'] },
+    { name: 'South C', workers: 87, latitude: -1.303, longitude: 36.829, popular: ['Cleaners', 'Nannies'] },
+    { name: 'Syokimau', workers: 73, latitude: -1.348, longitude: 36.928, popular: ['Cleaners', 'Deep cleaning'] },
+    { name: 'Ruaka', workers: 112, latitude: -1.204, longitude: 36.765, popular: ['Nannies', 'Cleaners'] },
+    { name: 'Parklands', workers: 131, latitude: -1.263, longitude: 36.815, popular: ['Caregivers', 'Cleaners'] },
     { name: 'Langata', workers: 98, latitude: -1.35, longitude: 36.768, popular: ['Gardeners', 'Nannies'] },
   ],
   totalWorkers: 1475,
@@ -187,12 +176,12 @@ export const DEFAULT_HOME_FAQ: FaqItem[] = [
   {
     question: 'How do you verify the Police Clearance (Good Conduct)?',
     answer:
-      'We use the e-Citizen portal to verify the authenticity of all Police Clearance Certificates. Additionally, we conduct a fingerprint-based background check through our security partners to ensure no records have been omitted.',
+      'We use the e-Citizen portal to verify the authenticity of all Police Clearance Certificates.',
   },
   {
     question: 'What happens if a worker gets sick or leaves?',
     answer:
-      'We provide a 90-day free replacement guarantee. If a placement does not work out for any reason, we will match you with a new professional at no additional placement cost.',
+      'We provide a 60-day free replacement guarantee. If a placement does not work out for any reason, we will match you with a new professional at no additional placement cost.',
   },
   {
     question: 'Do I pay the nanny through the app?',
@@ -215,7 +204,7 @@ export const DEFAULT_PRICING_FAQ: FaqItem[] = [
   {
     question: 'What if the placement does not work out?',
     answer:
-      'We include a 14-day replacement guarantee at no extra placement charge. For longer-term peace of mind, our standard replacement policy covers 90 days after hire.',
+      'We include a 14-day replacement guarantee at no extra placement charge. For longer-term peace of mind, our standard replacement policy covers 60 days after hire.',
   },
   {
     question: 'When is nanny contact information shared?',
@@ -234,12 +223,7 @@ export const DEFAULT_HOW_IT_WORKS_FAQ: FaqItem[] = [
   {
     question: 'How long does vetting take?',
     answer:
-      'Most candidates complete our five-step integrity engine within 7 to 10 business days. ID verification and police clearance are checked before a profile goes live.',
-  },
-  {
-    question: 'What is the trial period shield?',
-    answer:
-      'Every placement includes a supervised trial period with check-ins from our team. If the fit is not right, we activate our replacement guarantee at no extra placement fee.',
+      'Most candidates complete our integrity engine within 7 to 10 business days. ID verification and police clearance are checked before a profile goes live.',
   },
 ]
 
@@ -304,8 +288,8 @@ export const DEFAULT_SERVICES: ServiceCard[] = [
     description:
       'Full-day or part-time childcare from vetted, trained nannies. First-aid certified and background-checked.',
     icon: 'child_care',
-    basePrice: 4500,
-    unit: 'Per Day',
+    basePrice: 500,
+    unit: 'Per Day / Per Month',
     popular: true,
     tag: 'Most Popular',
     tagColor: 'bg-brand-pink text-white',
@@ -330,8 +314,8 @@ export const DEFAULT_SERVICES: ServiceCard[] = [
     description:
       'Trained companions for your elderly loved ones — medication reminders, light housekeeping, and warm company.',
     icon: 'elderly',
-    basePrice: 5500,
-    unit: 'Per Shift',
+    basePrice: 1200,
+    unit: 'Per Day / Per Month',
     popular: false,
     tag: 'Compassionate',
     tagColor: 'bg-tertiary text-white',

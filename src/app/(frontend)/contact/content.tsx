@@ -330,7 +330,7 @@ export function ContactContent({ contact = DEFAULT_CONTACT_PAGE }: ContactConten
                 ))}
               </div>
               <p className="text-[12px] text-white/35 mt-8">
-                {COMPANY.legalName} · Nairobi · Est. {COMPANY.founded}
+                {COMPANY.legalName} · Ruiru · Est. {COMPANY.founded}
               </p>
             </SectionEntrance>
           </div>

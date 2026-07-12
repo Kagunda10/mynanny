@@ -89,7 +89,7 @@ export function Footer({ settings = DEFAULT_SITE_SETTINGS }: FooterProps) {
 
       <div className="max-w-[1280px] mx-auto px-5 md:px-6 mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-surface-container-highest/50 text-[12px]">
         <p>&copy; 2026 Mynanny App Ltd. All rights reserved.</p>
-        <p>Designed with love in Nairobi</p>
+        <p>Designed with love in Ruiru</p>
       </div>
     </footer>
   )

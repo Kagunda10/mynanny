@@ -4,7 +4,7 @@ export const Homepage: GlobalConfig = {
   slug: 'homepage',
   label: 'Homepage',
   fields: [
-    { name: 'heroEyebrow', type: 'text', defaultValue: 'Most trusted in Nairobi' },
+    { name: 'heroEyebrow', type: 'text', defaultValue: 'Most trusted in Kenya and beyond' },
     { name: 'heroHeadline', type: 'text', required: true },
     { name: 'heroSubheadline', type: 'textarea' },
     { name: 'heroCtaText', type: 'text', defaultValue: 'Get Matched Free' },

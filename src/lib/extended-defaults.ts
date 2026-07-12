@@ -27,8 +27,6 @@ export const DEFAULT_MARKETING: MarketingContent = {
     steps: [
       { icon: 'document_scanner', title: 'ID Verification', description: 'Biometric ID & Document cross-match.' },
       { icon: 'gavel', title: 'Criminal Check', description: 'Police Clearance & Interpol checks.' },
-      { icon: 'psychology', title: 'Psych Test', description: 'Assessing temperament and ethics.' },
-      { icon: 'medical_information', title: 'Medical Exam', description: 'Comprehensive fitness-for-duty clearance.' },
       { icon: 'verified_user', title: 'Live Onboarding', description: 'Final face-to-face service training.', isFinal: true },
     ],
   },
@@ -40,8 +38,8 @@ export const DEFAULT_MARKETING: MarketingContent = {
     ctaHref: '#match-form',
     steps: [
       { number: '1', title: 'Pick your service', description: 'Nanny, Cleaning, or Specialty Care.', stickyTop: '100px' },
-      { number: '2', title: 'View matched profiles', description: 'See ratings, skills, and vetting status.', stickyTop: '140px' },
-      { number: '3', title: 'Interview via App', description: 'Video call or chat directly with candidates.', stickyTop: '180px' },
+      { number: '2', title: 'View matched profiles', description: 'See trust score, skills, and vetting status.', stickyTop: '140px' },
+      { number: '3', title: 'Interviews arranged via video calls or direct voice calls', description: 'Speak directly with candidates before you hire.', stickyTop: '180px' },
       { number: '4', title: 'Secure & Onboard', description: 'Pay the placement fee via M-Pesa & start.', stickyTop: '220px', isFinal: true },
     ],
   },
@@ -63,8 +61,8 @@ export const DEFAULT_MARKETING: MarketingContent = {
   matchForm: {
     title: "Let's find your perfect match.",
     description: "Tell us about your home and we'll send you 3 curated profiles by morning.",
-    benefits: ['No obligation to hire', 'Response within 4 hours', 'Free trial day included'],
-    serviceOptions: ['Full-time Nanny', 'Deep Cleaning', 'Part-time Housekeeper'],
+    benefits: ['No obligation to hire', 'Response within 4 hours'],
+    serviceOptions: ['Full-time Dayburg Nanny', 'Full-time Live-in Nanny', 'Deep Cleaning'],
     successMessage: 'Thank you! We will send your matches within 4 hours.',
   },
 }
@@ -92,28 +90,28 @@ export const DEFAULT_ABOUT: AboutContent = {
 
 export const DEFAULT_TIMELINE: TimelineItem[] = [
   {
-    year: '2019',
-    title: 'The Seed',
-    description: 'Founded in a small Westlands apartment with a team of three and a vision for safety.',
+    year: '2024',
+    title: 'Started Operating',
+    description: 'Started operating to connect Kenyan families with vetted domestic professionals.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDwSvv3Wu-XHjaZUsdFNqia8UbhBOguzGV5dOT8DzgOU_42LOWJJF6Qac0JDdba_gX3GGFKTR2KxVhqSRDnSU6ZgTMzpjPYtY0Y27_f4qYZ8sAVxVpuUzWmSGSjIlBTwhl8-me4kxpDGuM71NfRs3iQuqbJkfGPdyVFZ_RJGr8mFU1pey7cHu4_sd8dT9dq2zvRncvruQrOG4gkO2Qa8KlDRbrfeLEmGYwwaTRKZgviCE1OGdhbokk6ow',
   },
   {
-    year: '2021',
-    title: '1,000 Homes',
-    description: 'Reached the milestone of serving 1,000 families across the Nairobi metropolitan area.',
+    year: '2025',
+    title: '360 Homes',
+    description: 'Reached the milestone of serving 360 families across Kenya.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBSAFyNosF8uIrImL1rVClgAWQSIkCe4bxWj8L1ro5n4Yn4VzjnEXzde9Jlrq6eUxQdbSjvIeT4A6l20bWKr2jbeqsW8AtegLgE9jvgF2lIPjwF4H1Za87vV531NS-DpUhRT75UJZs75yK7DPPSOoLortBjYz87qUusb9BaZ99iIh781Xxhe-a1fwiodIjOVWYBzUFQAkllFZzkxJZOrdBNNmAeaRoqo3YOmatN_OYjCTWLJZBRfXJYBQ',
   },
   {
-    year: '2023',
+    year: '2025',
     title: 'Vetting Lab',
-    description: 'Launched our proprietary 12-step verification system including AI-backed background checks.',
+    description: 'Launched our proprietary verification system including AI-backed background checks.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuBocsgWPI_gkZ-SFbt7rlHQi6xHelfH3EKECdvApOi0_4ZMe9SN7-qnFg6t-iBl3xzlD0s6LTGRCQtQBZa7WSB1BB91plsz7bFlO2v_ck0CEH6_ZTUiPLPNAaP1QAkJGOxxde4gMUytOF8lbygFDKEs_ZNT17eHE-DQDa0Lj2I_5TUzwhoyRJnUvAm-lCa6EMfdCAJDj6MKpZ2abHyrwzo-ki8w99xMxRU8qi5pyyE7Rnlpj0vb_zb7aQ',
   },
   {
-    year: '2024',
+    year: '2026',
     title: 'Empowerment',
     description: 'Voted as the #1 platform for domestic worker rights and fair compensation in East Africa.',
     image:

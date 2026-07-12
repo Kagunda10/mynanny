@@ -33,7 +33,7 @@ const clashDisplay = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'MyNanny - Vetted Nannies, Housekeepers & Cleaners in Nairobi',
+    default: 'MyNanny - Vetted Nannies & Cleaners in Kenya',
     template: '%s | MyNanny',
   },
   description:

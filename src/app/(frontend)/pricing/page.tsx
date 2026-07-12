@@ -10,9 +10,9 @@ import {
 } from '@/lib/cms'
 
 export const metadata: Metadata = {
-  title: 'Pricing | Nanny, Housekeeper & Cleaning Costs in Nairobi | Mynanny',
+  title: 'Pricing | Nanny & Cleaning Costs in Nairobi | Mynanny',
   description:
-    'Transparent pricing for nannies, housekeepers, caregivers, gardeners, and deep cleaning teams in Nairobi. Updated monthly from real placements. Pay via M-Pesa.',
+    'Transparent pricing for nannies, caregivers, gardeners, and deep cleaning teams in Nairobi. Updated monthly from real placements. Pay via M-Pesa.',
 }
 
 export default async function PricingPage() {

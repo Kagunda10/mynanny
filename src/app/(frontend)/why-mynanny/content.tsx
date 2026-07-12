@@ -2,7 +2,6 @@
 
 import { SectionEntrance } from '@/components/motion/section-entrance'
 import { EyebrowPill } from '@/components/ui/eyebrow-pill'
-import { SectionHeader } from '@/components/ui/section-header'
 import { PrimaryButton } from '@/components/ui/primary-button'
 import { CountUp } from '@/components/motion/count-up'
 import { SOSPhoneDemo } from '@/components/sections/sos-phone-demo'
@@ -74,7 +73,7 @@ export function WhyMyNannyContent({
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <PrimaryButton href="/#match-form">Get Matched Free</PrimaryButton>
-              <PrimaryButton variant="secondary" href="#vetting">
+              <PrimaryButton variant="secondary" href="/#vetting">
                 View Vetting Process
               </PrimaryButton>
             </div>
@@ -209,94 +208,6 @@ export function WhyMyNannyContent({
             </div>
           </div>
         </SectionEntrance>
-      </section>
-
-      {/* Vetting Bento Grid */}
-      <section id="vetting" className="floating-slab my-20">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-8 py-20 md:py-28">
-          <SectionEntrance>
-            <SectionHeader
-              eyebrow={<EyebrowPill icon="shield" text="Our 5-Step Integrity Engine" color="secondary" />}
-              title="Every nanny passes our gauntlet."
-              subtitle="Before meeting your family, every candidate is screened through a rigorous multi-stage process."
-              titleClassName="text-white"
-              subtitleClassName="text-white/50 text-[16px] max-w-xl mx-auto"
-              className="mb-14"
-            />
-          </SectionEntrance>
-
-          <SectionEntrance delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
-              <div className="md:col-span-2 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
-                <div>
-                  <span className="text-[12px] font-bold text-white/30 tracking-widest">STEP 01</span>
-                  <h3 className="mt-2 text-[20px] font-semibold text-white">Digital Forensics</h3>
-                  <p className="mt-2 text-[14px] text-white/50">
-                    Social media audit, phone verification, and digital identity cross-referencing.
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-white/20 !text-[40px] self-end">
-                  fingerprint
-                </span>
-              </div>
-
-              <div className="md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-colors">
-                <div>
-                  <span className="text-[12px] font-bold text-white/30 tracking-widest">STEP 02</span>
-                  <h3 className="mt-2 text-[20px] font-semibold text-white">In-Person Audit</h3>
-                  <p className="mt-2 text-[14px] text-white/50">
-                    Face-to-face interview at our offices with behavioral assessment.
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-white/20 !text-[40px] self-end">
-                  person_search
-                </span>
-              </div>
-
-              <div className="md:col-span-1 md:row-span-2 bg-gradient-to-b from-primary to-primary-container rounded-3xl p-6 flex flex-col justify-between">
-                <div>
-                  <span className="text-[12px] font-bold text-white/50 tracking-widest">STEP 03</span>
-                  <h3 className="mt-2 text-[20px] font-semibold text-white">
-                    Medical &amp; First Aid
-                  </h3>
-                  <p className="mt-2 text-[14px] text-white/70">
-                    Full medical clearance and certified first-aid training verification.
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-white/30 !text-[56px] self-end">
-                  medical_services
-                </span>
-              </div>
-
-              <div className="md:col-span-1 bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-colors">
-                <div>
-                  <span className="text-[12px] font-bold text-white/30 tracking-widest">STEP 04</span>
-                  <h3 className="mt-2 text-[20px] font-semibold text-white">House-Level Vetting</h3>
-                  <p className="mt-2 text-[14px] text-white/50">
-                    Home visit to verify residence and family references.
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-white/20 !text-[40px] self-end">
-                  home_pin
-                </span>
-              </div>
-
-              <div className="md:col-span-2 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
-                <div>
-                  <span className="text-[12px] font-bold text-white/30 tracking-widest">STEP 05</span>
-                  <h3 className="mt-2 text-[20px] font-semibold text-white">Trial Period Shield</h3>
-                  <p className="mt-2 text-[14px] text-white/50">
-                    Supervised trial period with check-ins, feedback loops, and replacement
-                    guarantee.
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-white/20 !text-[40px] self-end">
-                  verified_user
-                </span>
-              </div>
-            </div>
-          </SectionEntrance>
-        </div>
       </section>
 
       {/* Safety Features - Interactive SOS Phone Demo */}

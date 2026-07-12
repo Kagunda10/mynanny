@@ -2,8 +2,8 @@ export const COMPANY = {
   name: 'MyNanny',
   legalName: 'Mynanny App Ltd',
   tagline: 'Cleaning & Domestic Services',
-  founded: 2019,
-  location: 'Nairobi, Kenya',
+  founded: 2024,
+  location: 'Ruiru, Kenya',
   website: 'https://mynanny.co.ke',
   appUrl: 'https://web.mynanny.co.ke',
   email: 'info@mynanny.co.ke',
@@ -21,9 +21,9 @@ export const COMPANY = {
 export const ABOUT = {
   founders: ['Alexander', 'James'],
   origin:
-    'Founded in 2019 by Alexander and James, MyNanny was born from a desire to give working homeowners access to professional, world-class domestic services. They identified a gap in the market for reliable domestic help and built a solution that benefits both busy families and professional domestic workers in Kenya.',
+    'Started operating in 2024 by Alexander and James, MyNanny was born from a desire to give working homeowners access to professional, world-class domestic services. They identified a gap in the market for reliable domestic help and built a solution that benefits both busy families and professional domestic workers in Kenya.',
   body:
-    'MyNanny connects homeowners with independent domestic service professionals, including housekeepers, nannies, caregivers, gardeners, and cleaning experts. Every worker has years of experience and undergoes rigorous background checks. Our platform features a robust rating system to ensure consistent, excellent results.',
+    'MyNanny connects homeowners with independent domestic service professionals, including nannies, caregivers, gardeners, and cleaning experts. Every worker has years of experience and undergoes rigorous background checks. Our platform features a robust rating system to ensure consistent, excellent results.',
   mission:
     'To digitize access to domestic services and create high quality job opportunities for independent domestic workers in Kenya.',
   vision:
